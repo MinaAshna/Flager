@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        let flagViewModels: [FlagViewModel] = FlagData().flags.map { FlagViewModel(flag: $0) }
+        FlagView(flags: flagViewModels)
     }
 }
 

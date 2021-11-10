@@ -2,7 +2,7 @@
 //  Flag.swift
 //  Flager
 //
-//  Created by Mina Ashna on 08/11/2021.
+//  Created by Mina Ashna on 10/11/2021.
 //
 
 import Foundation
@@ -13,7 +13,8 @@ struct Flag: Decodable {
     let hasSymbol: Bool
 }
 
-enum FlagColors: Decodable {
+enum FlagColors: String, Decodable {
     case white
     case red
+    case yellow
 }

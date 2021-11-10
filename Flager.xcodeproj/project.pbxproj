@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B422FC12273C22370044E402 /* FlagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422FC11273C22370044E402 /* FlagViewModel.swift */; };
+		B422FC4A273C629F0044E402 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422FC49273C629F0044E402 /* Flag.swift */; };
+		B422FC4B273C69D20044E402 /* FlagSource.json in Resources */ = {isa = PBXBuildFile; fileRef = B47D36B62739D0B1005F42CA /* FlagSource.json */; };
 		B47D36B02739CEC3005F42CA /* FlagData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D36AF2739CEC3005F42CA /* FlagData.swift */; };
-		B47D36B42739CFC4005F42CA /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D36B32739CFC4005F42CA /* Flag.swift */; };
-		B47D36B72739D0B1005F42CA /* FlagSource.json in Sources */ = {isa = PBXBuildFile; fileRef = B47D36B62739D0B1005F42CA /* FlagSource.json */; };
 		B47D36B92739D3CC005F42CA /* FlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D36B82739D3CC005F42CA /* FlagView.swift */; };
 		B4A86B372739CA71004AE3A7 /* FlagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A86B362739CA71004AE3A7 /* FlagerApp.swift */; };
 		B4A86B392739CA71004AE3A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A86B382739CA71004AE3A7 /* ContentView.swift */; };
@@ -38,8 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B422FC11273C22370044E402 /* FlagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewModel.swift; sourceTree = "<group>"; };
+		B422FC49273C629F0044E402 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
 		B47D36AF2739CEC3005F42CA /* FlagData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagData.swift; sourceTree = "<group>"; };
-		B47D36B32739CFC4005F42CA /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
 		B47D36B62739D0B1005F42CA /* FlagSource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FlagSource.json; sourceTree = "<group>"; };
 		B47D36B82739D3CC005F42CA /* FlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagView.swift; sourceTree = "<group>"; };
 		B4A86B332739CA71004AE3A7 /* Flager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,8 +100,9 @@
 		B47D36B22739CF87005F42CA /* Flag */ = {
 			isa = PBXGroup;
 			children = (
-				B47D36B32739CFC4005F42CA /* Flag.swift */,
 				B47D36B82739D3CC005F42CA /* FlagView.swift */,
+				B422FC11273C22370044E402 /* FlagViewModel.swift */,
+				B422FC49273C629F0044E402 /* Flag.swift */,
 			);
 			path = Flag;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B422FC4B273C69D20044E402 /* FlagSource.json in Resources */,
 				B4A86B3E2739CA74004AE3A7 /* Preview Assets.xcassets in Resources */,
 				B4A86B3B2739CA74004AE3A7 /* Assets.xcassets in Resources */,
 			);
@@ -302,11 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4A86B392739CA71004AE3A7 /* ContentView.swift in Sources */,
+				B422FC4A273C629F0044E402 /* Flag.swift in Sources */,
 				B4A86B372739CA71004AE3A7 /* FlagerApp.swift in Sources */,
-				B47D36B72739D0B1005F42CA /* FlagSource.json in Sources */,
 				B47D36B02739CEC3005F42CA /* FlagData.swift in Sources */,
 				B47D36B92739D3CC005F42CA /* FlagView.swift in Sources */,
-				B47D36B42739CFC4005F42CA /* Flag.swift in Sources */,
+				B422FC12273C22370044E402 /* FlagViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

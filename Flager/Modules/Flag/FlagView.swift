@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct FlagView: View {
-    var flags: [Flag] = []
+    var flags: [FlagViewModel]
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(flags) { flag in
+            Text(flag.countryCode)
+        }
     }
 }
 
 struct FlagView_Previews: PreviewProvider {
     static var previews: some View {
-        FlagView()
+        let flagViewModels = [FlagViewModel(flag: Flag(countryCode: "DK", colors: [.red, .white], hasSymbol: false))]
+        FlagView(flags: flagViewModels)
     }
 }
