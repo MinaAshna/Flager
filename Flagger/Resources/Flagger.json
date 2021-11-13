@@ -2,13 +2,13 @@
     {
       "name": "Afghanistan",
       "code": "AF",
-      "colors": ["black". "red", "green"],
+      "colors": ["black", "red", "green"],
       "hasSymbol": True
     },
     {
       "name": "Åland Islands",
       "code": "AX",
-      "colors": ["blue". "yellow", "red"],
+      "colors": ["blue", "yellow", "red"],
       "hasSymbol": False
     },
     {
@@ -51,7 +51,7 @@
     {
       "name": "Antarctica",
       "code": "AQ",
-      "colors": ["blue"],
+      "colors": ["blue", "white"],
       "hasSymbol": True
     },
     {
@@ -104,43 +104,63 @@
     },
     {
       "name": "Bahrain",
-      "code": "BH"
+      "code": "BH",
+      "colors": ["red", "white"],
+      "hasSymbol": False
     },
     {
       "name": "Bangladesh",
-      "code": "BD"
+      "code": "BD",
+      "colors": ["green", "red"],
+      "hasSymbol": False
     },
     {
       "Name": "Barbados",
-      "code": "BB"
+      "code": "BB",
+      "colors": ["blue", "yellow"],
+      "hasSymbol": True
     },
     {
       "Name": "Belarus",
-      "code": "BY"
+      "code": "BY",
+      "colors": ["green", "red"],
+      "hasSymbol": True
     },
     {
       "Name": "Belgium",
-      "code": "BE"
+      "code": "BE",
+      "colors": ["black", "red", "yellow"],
+      "hasSymbol": False
     },
     {
       "Name": "Belize",
-      "code": "BZ"
+      "code": "BZ",
+      "colors": ["blue", "red"],
+      "hasSymbol": True
     },
     {
       "Name": "Benin",
-      "code": "BJ"
+      "code": "BJ",
+      "colors": ["green", "red", "yellow"],
+      "hasSymbol": False
     },
     {
       "Name": "Bermuda",
-      "code": "BM"
+      "code": "BM",
+      "colors": ["red"],
+      "hasSymbol": True
     },
     {
       "Name": "Bhutan",
-      "code": "BT"
+      "code": "BT",
+      "colors": ["orange", "yellow"],
+      "hasSymbol": True
     },
     {
       "Name": "Bolivia, Plurinational State of",
-      "code": "BO"
+      "code": "BO",
+      "colors": ["green", "red", "yellow"],
+      "hasSymbol": False
     },
     {
       "Name": "Bonaire, Sint Eustatius and Saba",
@@ -148,167 +168,253 @@
     },
     {
       "Name": "Bosnia and Herzegovina",
-      "code": "BA"
+      "code": "BA",
+      "colors": ["blue", "yellow"],
+      "hasSymbol": True
+      
     },
     {
       "Name": "Botswana",
-      "code": "BW"
+      "code": "BW",
+      "colors": ["black", "white", "blue"],
+      "hasSymbol": False
+      
     },
     {
       "Name": "Bouvet Island",
-      "code": "BV"
+      "code": "BV",
+      "colors": ["blue", "red", "white"],
+      "hasSymbol": False
     },
     {
       "Name": "Brazil",
-      "code": "BR"
+      "code": "BR",
+      "colors": ["green", "white"],
+      "hasSymbol": True
     },
     {
       "Name": "British Indian Ocean Territory",
-      "code": "IO"
+      "code": "IO",
+      "colors": ["blue", "white"],
+      "hasSymbol": True
     },
     {
       "Name": "Brunei Darussalam",
-      "code": "BN"
+      "code": "BN",
+      "colors": ["black", "white", "yellow"],
+      "hasSymbol": True
     },
     {
       "Name": "Bulgaria",
-      "code": "BG"
+      "code": "BG",
+      "colors": ["white", "green", "red"],
+      "hasSymbol": False
     },
     {
       "Name": "Burkina Faso",
-      "code": "BF"
+      "code": "BF",
+      "colors": ["green", "red"],
+      "hasSymbol": True
     },
     {
       "Name": "Burundi",
-      "code": "BI"
+      "code": "BI",
+      "colors": ["green", "red", "white"],
+      "hasSymbol": True
     },
     {
       "Name": "Cambodia",
-      "code": "KH"
+      "code": "KH",
+      "colors": ["blue", "red"],
+      "hasSymbol": True
     },
     {
       "Name": "Cameroon",
-      "code": "CM"
+      "code": "CM",
+      "colors": ["green", "red", "yellow"],
+      "hasSymbol": True
+      
     },
     {
       "Name": "Canada",
-      "code": "CA"
+      "code": "CA",
+      "colors": ["white", "red"],
+      "hasSymbol": True
     },
     {
       "Name": "Cape Verde",
-      "code": "CV"
+      "code": "CV",
+      "colors": ["red", "white", "blue"],
+      "hasSymbol": True
     },
     {
       "Name": "Cayman Islands",
-      "code": "KY"
+      "code": "KY",
+      "colors": ["blue"],
+      "hasSymbol": True
     },
     {
       "Name": "Central African Republic",
-      "code": "CF"
+      "code": "CF",
+      "colors": ["blue", "white", "green", "red", "yellow"],
+      "hasSymbol": True
     },
     {
       "Name": "Chad",
-      "code": "TD"
+      "code": "TD",
+      "colors": ["blue", "yellow", "red"],
+      "hasSymbol": False
+      
     },
     {
       "Name": "Chile",
-      "code": "CL"
+      "code": "CL",
+      "colors": ["blue", "white", "red"],
+      "hasSymbol": True
     },
     {
       "Name": "China",
-      "code": "CN"
+      "code": "CN",
+      "colors": ["red"],
+      "hasSymbol": True
     },
     {
       "Name": "Christmas Island",
-      "code": "CX"
+      "code": "CX",
+      "colors": ["blue", "green"],
+      "hasSymbol": True
     },
     {
       "Name": "Cocos (Keeling) Islands",
-      "code": "CC"
+      "code": "CC",
+      "colors": ["green"],
+      "hasSymbol": True
     },
     {
       "Name": "Colombia",
-      "code": "CO"
+      "code": "CO",
+      "colors": ["yellow", "blue", "red"],
+      "hasSymbol": False
     },
     {
       "Name": "Comoros",
-      "code": "KM"
+      "code": "KM",
+      "colors": ["green", "red", "yellow", "blue", "white"],
+      "hasSymbol": True
     },
     {
-      "Name": "Congo",
-      "code": "CG"
+      "Name": "Republic of Congo",
+      "code": "CG",
+      "colors": ["green", "red", "yellow"],
+      "hasSymbol": False
     },
     {
       "Name": "Congo, the Democratic Republic of the",
-      "code": "CD"
+      "code": "CD",
+      "colors": ["blue", "red", "yellow"],
+      "hasSymbol": True
     },
     {
       "Name": "Cook Islands",
-      "code": "CK"
+      "code": "CK",
+      "colors": ["blue"],
+      "hasSymbol": True
     },
     {
       "Name": "Costa Rica",
-      "code": "CR"
+      "code": "CR",
+      "colors": ["blue", "white", "red"],
+      "hasSymbol": True
     },
     {
       "Name": "Côte d'Ivoire",
-      "code": "CI"
+      "code": "CI",
+      "colors": ["yellow", "white", "green"],
+      "hasSymbol": False
     },
     {
       "Name": "Croatia",
-      "code": "HR"
+      "code": "HR",
+      "colors": ["red", "white", "blue"],
+      "hasSymbol": True
     },
     {
       "Name": "Cuba",
-      "code": "CU"
+      "code": "CU",
+      "colors": ["white", "red", "blue"],
+      "hasSymbol": True
     },
     {
       "Name": "Curaçao",
-      "code": "CW"
+      "code": "CW",
+      "colors": ["blue", "yellow"],
+      "hasSymbol": True
     },
     {
       "Name": "Cyprus",
-      "code": "CY"
+      "code": "CY",
+      "colors": ["white"],
+      "hasSymbol": True
     },
     {
       "Name": "Czech Republic",
-      "code": "CZ"
+      "code": "CZ",
+      "colors": ["blue", "red", "white"],
+      "hasSymbol": False
     },
     {
       "Name": "Denmark",
-      "code": "DK"
+      "code": "DK",
+      "colors": ["white", "red"],
+      "hasSymbol": False
     },
     {
       "Name": "Djibouti",
-      "code": "DJ"
+      "code": "DJ",
+      "colors": ["white", "blue", "green"],
+      "hasSymbol": True
     },
     {
       "Name": "Dominica",
-      "code": "DM"
+      "code": "DM",
+      "colors": ["yellow", "black", "white", "green"],
+      "hasSymbol": True
     },
     {
       "Name": "Dominican Republic",
-      "code": "DO"
+      "code": "DO",
+      "colors": ["blue", "red", "white"],
+      "hasSymbol": True
     },
     {
       "Name": "Ecuador",
-      "code": "EC"
+      "code": "EC",
+      "colors": ["yellow", "blue", "red"],
+      "hasSymbol": True
     },
     {
       "Name": "Egypt",
-      "code": "EG"
+      "code": "EG",
+      "colors": ["red", "white", "black"],
+      "hasSymbol": True
     },
     {
       "Name": "El Salvador",
-      "code": "SV"
+      "code": "SV",
+      "colors": ["blue", "white"],
+      "hasSymbol": True
     },
     {
       "Name": "Equatorial Guinea",
-      "code": "GQ"
+      "code": "GQ",
+      "colors": ["blue", "green", "white", "red"],
+      "hasSymbol": True
     },
     {
       "Name": "Eritrea",
-      "code": "ER"
+      "code": "ER",
+      "colors": ["green", "red", "blue"],
+      "hasSymbol": True
     },
     {
       "Name": "Estonia",
