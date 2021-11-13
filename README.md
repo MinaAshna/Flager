@@ -1,2 +1,2 @@
-# Flager
-Flag finder by colors
+# Flagger
+Flag finder
