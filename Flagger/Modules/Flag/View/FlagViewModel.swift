@@ -9,14 +9,16 @@ import Foundation
 
 class FlagViewModel: ObservableObject, Identifiable {
     init(flag: Flag) {
-        countryCode = flag.countryCode
+        name = flag.name
+        code = flag.code
         colors = flag.colors
         hasSymbol = flag.hasSymbol
     }
     
     let id = UUID()
-    
-    @Published var countryCode: String
+
+    @Published var name: String
+    @Published var code: String
     @Published var colors: [FlagColors]
     @Published var hasSymbol: Bool
 }

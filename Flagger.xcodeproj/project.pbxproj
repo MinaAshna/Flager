@@ -15,13 +15,11 @@
 		B47257FC274015650020C375 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47257FB274015650020C375 /* FilterView.swift */; };
 		B47D36B02739CEC3005F42CA /* FlagData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D36AF2739CEC3005F42CA /* FlagData.swift */; };
 		B47D36B92739D3CC005F42CA /* FlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D36B82739D3CC005F42CA /* FlagView.swift */; };
-		B4A86B372739CA71004AE3A7 /* FlagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A86B362739CA71004AE3A7 /* FlagerApp.swift */; };
+		B4A86B372739CA71004AE3A7 /* FlaggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A86B362739CA71004AE3A7 /* FlaggerApp.swift */; };
 		B4A86B392739CA71004AE3A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A86B382739CA71004AE3A7 /* ContentView.swift */; };
 		B4A86B3B2739CA74004AE3A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A86B3A2739CA74004AE3A7 /* Assets.xcassets */; };
 		B4A86B3E2739CA74004AE3A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A86B3D2739CA74004AE3A7 /* Preview Assets.xcassets */; };
-		B4A86B482739CA75004AE3A7 /* FlagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A86B472739CA75004AE3A7 /* FlagerTests.swift */; };
-		B4A86B522739CA75004AE3A7 /* FlagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A86B512739CA75004AE3A7 /* FlagerUITests.swift */; };
-		B4A86B542739CA75004AE3A7 /* FlagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A86B532739CA75004AE3A7 /* FlagerUITestsLaunchTests.swift */; };
+		B4A86B482739CA75004AE3A7 /* FlaggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A86B472739CA75004AE3A7 /* FlaggerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,16 +48,14 @@
 		B47D36AF2739CEC3005F42CA /* FlagData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagData.swift; sourceTree = "<group>"; };
 		B47D36B62739D0B1005F42CA /* FlagSource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FlagSource.json; sourceTree = "<group>"; };
 		B47D36B82739D3CC005F42CA /* FlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagView.swift; sourceTree = "<group>"; };
-		B4A86B332739CA71004AE3A7 /* Flager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flager.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4A86B362739CA71004AE3A7 /* FlagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagerApp.swift; sourceTree = "<group>"; };
+		B4A86B332739CA71004AE3A7 /* Flagger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flagger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4A86B362739CA71004AE3A7 /* FlaggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaggerApp.swift; sourceTree = "<group>"; };
 		B4A86B382739CA71004AE3A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B4A86B3A2739CA74004AE3A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4A86B3D2739CA74004AE3A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B4A86B432739CA75004AE3A7 /* FlagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4A86B472739CA75004AE3A7 /* FlagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagerTests.swift; sourceTree = "<group>"; };
-		B4A86B4D2739CA75004AE3A7 /* FlagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4A86B512739CA75004AE3A7 /* FlagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagerUITests.swift; sourceTree = "<group>"; };
-		B4A86B532739CA75004AE3A7 /* FlagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B4A86B432739CA75004AE3A7 /* FlaggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlaggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4A86B472739CA75004AE3A7 /* FlaggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaggerTests.swift; sourceTree = "<group>"; };
+		B4A86B4D2739CA75004AE3A7 /* FlaggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlaggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,9 +139,8 @@
 		B4A86B2A2739CA71004AE3A7 = {
 			isa = PBXGroup;
 			children = (
-				B4A86B352739CA71004AE3A7 /* Flager */,
-				B4A86B462739CA75004AE3A7 /* FlagerTests */,
-				B4A86B502739CA75004AE3A7 /* FlagerUITests */,
+				B4A86B352739CA71004AE3A7 /* Flagger */,
+				B4A86B462739CA75004AE3A7 /* FlaggerTests */,
 				B4A86B342739CA71004AE3A7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,25 +148,25 @@
 		B4A86B342739CA71004AE3A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B4A86B332739CA71004AE3A7 /* Flager.app */,
-				B4A86B432739CA75004AE3A7 /* FlagerTests.xctest */,
-				B4A86B4D2739CA75004AE3A7 /* FlagerUITests.xctest */,
+				B4A86B332739CA71004AE3A7 /* Flagger.app */,
+				B4A86B432739CA75004AE3A7 /* FlaggerTests.xctest */,
+				B4A86B4D2739CA75004AE3A7 /* FlaggerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B4A86B352739CA71004AE3A7 /* Flager */ = {
+		B4A86B352739CA71004AE3A7 /* Flagger */ = {
 			isa = PBXGroup;
 			children = (
 				B47D36B52739D09F005F42CA /* Resources */,
 				B47D36B12739CF76005F42CA /* Modules */,
 				B47D36AE2739CEAD005F42CA /* Helper */,
-				B4A86B362739CA71004AE3A7 /* FlagerApp.swift */,
+				B4A86B362739CA71004AE3A7 /* FlaggerApp.swift */,
 				B4A86B382739CA71004AE3A7 /* ContentView.swift */,
 				B4A86B3A2739CA74004AE3A7 /* Assets.xcassets */,
 				B4A86B3C2739CA74004AE3A7 /* Preview Content */,
 			);
-			path = Flager;
+			path = Flagger;
 			sourceTree = "<group>";
 		};
 		B4A86B3C2739CA74004AE3A7 /* Preview Content */ = {
@@ -182,29 +177,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B4A86B462739CA75004AE3A7 /* FlagerTests */ = {
+		B4A86B462739CA75004AE3A7 /* FlaggerTests */ = {
 			isa = PBXGroup;
 			children = (
-				B4A86B472739CA75004AE3A7 /* FlagerTests.swift */,
+				B4A86B472739CA75004AE3A7 /* FlaggerTests.swift */,
 			);
-			path = FlagerTests;
-			sourceTree = "<group>";
-		};
-		B4A86B502739CA75004AE3A7 /* FlagerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B4A86B512739CA75004AE3A7 /* FlagerUITests.swift */,
-				B4A86B532739CA75004AE3A7 /* FlagerUITestsLaunchTests.swift */,
-			);
-			path = FlagerUITests;
+			path = FlaggerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B4A86B322739CA71004AE3A7 /* Flager */ = {
+		B4A86B322739CA71004AE3A7 /* Flagger */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4A86B572739CA75004AE3A7 /* Build configuration list for PBXNativeTarget "Flager" */;
+			buildConfigurationList = B4A86B572739CA75004AE3A7 /* Build configuration list for PBXNativeTarget "Flagger" */;
 			buildPhases = (
 				B4A86B2F2739CA71004AE3A7 /* Sources */,
 				B4A86B302739CA71004AE3A7 /* Frameworks */,
@@ -214,14 +200,14 @@
 			);
 			dependencies = (
 			);
-			name = Flager;
+			name = Flagger;
 			productName = Flager;
-			productReference = B4A86B332739CA71004AE3A7 /* Flager.app */;
+			productReference = B4A86B332739CA71004AE3A7 /* Flagger.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B4A86B422739CA75004AE3A7 /* FlagerTests */ = {
+		B4A86B422739CA75004AE3A7 /* FlaggerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4A86B5A2739CA75004AE3A7 /* Build configuration list for PBXNativeTarget "FlagerTests" */;
+			buildConfigurationList = B4A86B5A2739CA75004AE3A7 /* Build configuration list for PBXNativeTarget "FlaggerTests" */;
 			buildPhases = (
 				B4A86B3F2739CA75004AE3A7 /* Sources */,
 				B4A86B402739CA75004AE3A7 /* Frameworks */,
@@ -232,14 +218,14 @@
 			dependencies = (
 				B4A86B452739CA75004AE3A7 /* PBXTargetDependency */,
 			);
-			name = FlagerTests;
+			name = FlaggerTests;
 			productName = FlagerTests;
-			productReference = B4A86B432739CA75004AE3A7 /* FlagerTests.xctest */;
+			productReference = B4A86B432739CA75004AE3A7 /* FlaggerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B4A86B4C2739CA75004AE3A7 /* FlagerUITests */ = {
+		B4A86B4C2739CA75004AE3A7 /* FlaggerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B4A86B5D2739CA75004AE3A7 /* Build configuration list for PBXNativeTarget "FlagerUITests" */;
+			buildConfigurationList = B4A86B5D2739CA75004AE3A7 /* Build configuration list for PBXNativeTarget "FlaggerUITests" */;
 			buildPhases = (
 				B4A86B492739CA75004AE3A7 /* Sources */,
 				B4A86B4A2739CA75004AE3A7 /* Frameworks */,
@@ -250,9 +236,9 @@
 			dependencies = (
 				B4A86B4F2739CA75004AE3A7 /* PBXTargetDependency */,
 			);
-			name = FlagerUITests;
+			name = FlaggerUITests;
 			productName = FlagerUITests;
-			productReference = B4A86B4D2739CA75004AE3A7 /* FlagerUITests.xctest */;
+			productReference = B4A86B4D2739CA75004AE3A7 /* FlaggerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -278,7 +264,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B4A86B2E2739CA71004AE3A7 /* Build configuration list for PBXProject "Flager" */;
+			buildConfigurationList = B4A86B2E2739CA71004AE3A7 /* Build configuration list for PBXProject "Flagger" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -291,9 +277,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B4A86B322739CA71004AE3A7 /* Flager */,
-				B4A86B422739CA75004AE3A7 /* FlagerTests */,
-				B4A86B4C2739CA75004AE3A7 /* FlagerUITests */,
+				B4A86B322739CA71004AE3A7 /* Flagger */,
+				B4A86B422739CA75004AE3A7 /* FlaggerTests */,
+				B4A86B4C2739CA75004AE3A7 /* FlaggerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -332,7 +318,7 @@
 			files = (
 				B4A86B392739CA71004AE3A7 /* ContentView.swift in Sources */,
 				B422FC4A273C629F0044E402 /* Flag.swift in Sources */,
-				B4A86B372739CA71004AE3A7 /* FlagerApp.swift in Sources */,
+				B4A86B372739CA71004AE3A7 /* FlaggerApp.swift in Sources */,
 				B422FC51273C6D0D0044E402 /* FlagEventHandler.swift in Sources */,
 				B47257FC274015650020C375 /* FilterView.swift in Sources */,
 				B422FC4D273C6BE60044E402 /* FlagPresenter.swift in Sources */,
@@ -346,7 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4A86B482739CA75004AE3A7 /* FlagerTests.swift in Sources */,
+				B4A86B482739CA75004AE3A7 /* FlaggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,8 +340,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4A86B522739CA75004AE3A7 /* FlagerUITests.swift in Sources */,
-				B4A86B542739CA75004AE3A7 /* FlagerUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,12 +348,12 @@
 /* Begin PBXTargetDependency section */
 		B4A86B452739CA75004AE3A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B4A86B322739CA71004AE3A7 /* Flager */;
+			target = B4A86B322739CA71004AE3A7 /* Flagger */;
 			targetProxy = B4A86B442739CA75004AE3A7 /* PBXContainerItemProxy */;
 		};
 		B4A86B4F2739CA75004AE3A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B4A86B322739CA71004AE3A7 /* Flager */;
+			target = B4A86B322739CA71004AE3A7 /* Flagger */;
 			targetProxy = B4A86B4E2739CA75004AE3A7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -498,7 +482,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Flager/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Flagger/Preview Content\"";
 				DEVELOPMENT_TEAM = RE4SHLL9XY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -512,7 +496,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TeamM.Flager;
+				PRODUCT_BUNDLE_IDENTIFIER = TeamM.Flagger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -527,7 +511,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Flager/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Flagger/Preview Content\"";
 				DEVELOPMENT_TEAM = RE4SHLL9XY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -541,7 +525,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TeamM.Flager;
+				PRODUCT_BUNDLE_IDENTIFIER = TeamM.Flagger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -570,7 +554,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flager.app/Flager";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flagger.app/Flagger";
 			};
 			name = Debug;
 		};
@@ -595,7 +579,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flager.app/Flager";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flagger.app/Flagger";
 			};
 			name = Release;
 		};
@@ -648,7 +632,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B4A86B2E2739CA71004AE3A7 /* Build configuration list for PBXProject "Flager" */ = {
+		B4A86B2E2739CA71004AE3A7 /* Build configuration list for PBXProject "Flagger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4A86B552739CA75004AE3A7 /* Debug */,
@@ -657,7 +641,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4A86B572739CA75004AE3A7 /* Build configuration list for PBXNativeTarget "Flager" */ = {
+		B4A86B572739CA75004AE3A7 /* Build configuration list for PBXNativeTarget "Flagger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4A86B582739CA75004AE3A7 /* Debug */,
@@ -666,7 +650,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4A86B5A2739CA75004AE3A7 /* Build configuration list for PBXNativeTarget "FlagerTests" */ = {
+		B4A86B5A2739CA75004AE3A7 /* Build configuration list for PBXNativeTarget "FlaggerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4A86B5B2739CA75004AE3A7 /* Debug */,
@@ -675,7 +659,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B4A86B5D2739CA75004AE3A7 /* Build configuration list for PBXNativeTarget "FlagerUITests" */ = {
+		B4A86B5D2739CA75004AE3A7 /* Build configuration list for PBXNativeTarget "FlaggerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B4A86B5E2739CA75004AE3A7 /* Debug */,

@@ -28,11 +28,13 @@ struct FlagView: View {
                 .padding()
                 .frame(width: .infinity, height: 50, alignment: .leading)
 
-                List(flagsViewModel.flags) { flag in
-                    Text(flag.countryCode)
+                NavigationLink(destination: Text("More info about the country.")) {
+                    List(flagsViewModel.flags) { flag in
+                        Text("\(flag.name) - \(flag.code)")
+                    }
                 }
             }
-            .navigationTitle("Flager")
+            .navigationTitle("Flagger")
         }
         .background(Color.yellow)
     }
@@ -43,7 +45,7 @@ struct FlagView_Previews: PreviewProvider {
     }
 
     static var previews: some View {
-        let flagsViewModel = FlagsViewModel(flags: [Flag(countryCode: "DK", colors: [.red, .white], hasSymbol: false)])
+        let flagsViewModel = FlagsViewModel(flags: [Flag(name: "Denmark", code: "DK", colors: [.red, .white], hasSymbol: false)])
         FlagView(flagsViewModel: flagsViewModel,
                  eventHandler: DummyEventHandler())
     }

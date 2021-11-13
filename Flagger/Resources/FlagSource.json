@@ -1,0 +1,121 @@
+[
+    {
+      "name": "Afghanistan",
+      "code": "AF",
+      "colors": ["black", "red", "green"],
+      "hasSymbol": true
+    },
+    {
+      "name": "Åland Islands",
+      "code": "AX",
+      "colors": ["blue", "yellow", "red"],
+      "hasSymbol": false
+    },
+    {
+      "name": "Albania",
+      "code": "AL",
+      "colors": ["red"],
+      "hasSymbol": true
+    },
+    {
+      "name": "Algeria",
+      "code": "DZ",
+      "colors": ["green", "white"],
+      "hasSymbol": true
+    },
+    {
+      "name": "American Samoa",
+      "code": "AS",
+      "colors": ["blue", "white", "red"],
+      "hasSymbol": true
+    },
+    {
+      "name": "Andorra",
+      "code": "AD",
+      "colors": ["blue", "yellow", "red"],
+      "hasSymbol": true
+    },
+    {
+      "name": "Angola",
+      "code": "AO",
+      "colors": ["red", "black"],
+      "hasSymbol": true
+    },
+    {
+      "name": "Anguilla",
+      "code": "AI",
+      "colors": ["blue"],
+      "hasSymbol": true
+
+    },
+    {
+      "name": "Antarctica",
+      "code": "AQ",
+      "colors": ["blue"],
+      "hasSymbol": true
+    },
+    {
+      "name": "Antigua and Barbuda",
+      "code": "AG",
+      "colors": ["blue", "white", "red", "black"],
+      "hasSymbol": true
+    },
+    {
+      "name": "Argentina",
+      "code": "AR",
+      "colors": ["blue", "white"],
+      "hasSymbol": true
+    },
+    {
+      "name": "Armenia",
+      "code": "AM",
+      "colors": ["blue", "yellow", "red"],
+      "hasSymbol": false
+    },
+    {
+      "name": "Aruba",
+      "code": "AW",
+      "colors": ["blue", "yellow"],
+      "hasSymbol": true
+    },
+    {
+      "name": "Australia",
+      "code": "AU",
+      "colors": ["blue"],
+      "hasSymbol": true
+    },
+    {
+      "name": "Austria",
+      "code": "AT",
+      "colors": ["red", "white"],
+      "hasSymbol": false
+    },
+    {
+      "name": "Azerbaijan",
+      "code": "AZ",
+      "colors": ["blue", "green", "red"],
+      "hasSymbol": true
+    },
+    {
+      "name": "Bahamas",
+      "code": "BS",
+      "colors": ["green", "yellow", "black"],
+      "hasSymbol": false
+    }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

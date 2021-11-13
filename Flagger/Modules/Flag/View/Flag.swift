@@ -8,7 +8,8 @@
 import Foundation
 
 struct Flag: Decodable {
-    let countryCode: String
+    let name: String
+    let code: String
     let colors: [FlagColors]
     let hasSymbol: Bool
 }
@@ -17,4 +18,7 @@ enum FlagColors: String, Decodable {
     case white
     case red
     case yellow
+    case blue
+    case black
+    case green
 }
