@@ -10,6 +10,9 @@
 		B422FC12273C22370044E402 /* FlagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422FC11273C22370044E402 /* FlagViewModel.swift */; };
 		B422FC4A273C629F0044E402 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422FC49273C629F0044E402 /* Flag.swift */; };
 		B422FC4B273C69D20044E402 /* FlagSource.json in Resources */ = {isa = PBXBuildFile; fileRef = B47D36B62739D0B1005F42CA /* FlagSource.json */; };
+		B422FC4D273C6BE60044E402 /* FlagPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422FC4C273C6BE50044E402 /* FlagPresenter.swift */; };
+		B422FC51273C6D0D0044E402 /* FlagEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422FC50273C6D0D0044E402 /* FlagEventHandler.swift */; };
+		B47257FC274015650020C375 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47257FB274015650020C375 /* FilterView.swift */; };
 		B47D36B02739CEC3005F42CA /* FlagData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D36AF2739CEC3005F42CA /* FlagData.swift */; };
 		B47D36B92739D3CC005F42CA /* FlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47D36B82739D3CC005F42CA /* FlagView.swift */; };
 		B4A86B372739CA71004AE3A7 /* FlagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A86B362739CA71004AE3A7 /* FlagerApp.swift */; };
@@ -41,6 +44,9 @@
 /* Begin PBXFileReference section */
 		B422FC11273C22370044E402 /* FlagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewModel.swift; sourceTree = "<group>"; };
 		B422FC49273C629F0044E402 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
+		B422FC4C273C6BE50044E402 /* FlagPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagPresenter.swift; sourceTree = "<group>"; };
+		B422FC50273C6D0D0044E402 /* FlagEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagEventHandler.swift; sourceTree = "<group>"; };
+		B47257FB274015650020C375 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		B47D36AF2739CEC3005F42CA /* FlagData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagData.swift; sourceTree = "<group>"; };
 		B47D36B62739D0B1005F42CA /* FlagSource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FlagSource.json; sourceTree = "<group>"; };
 		B47D36B82739D3CC005F42CA /* FlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagView.swift; sourceTree = "<group>"; };
@@ -81,6 +87,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B422FC4E273C6CBF0044E402 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B422FC4C273C6BE50044E402 /* FlagPresenter.swift */,
+				B422FC50273C6D0D0044E402 /* FlagEventHandler.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B422FC4F273C6CCB0044E402 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B422FC11273C22370044E402 /* FlagViewModel.swift */,
+				B422FC49273C629F0044E402 /* Flag.swift */,
+				B47D36B82739D3CC005F42CA /* FlagView.swift */,
+				B47257FB274015650020C375 /* FilterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B47D36AE2739CEAD005F42CA /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,9 +126,8 @@
 		B47D36B22739CF87005F42CA /* Flag */ = {
 			isa = PBXGroup;
 			children = (
-				B47D36B82739D3CC005F42CA /* FlagView.swift */,
-				B422FC11273C22370044E402 /* FlagViewModel.swift */,
-				B422FC49273C629F0044E402 /* Flag.swift */,
+				B422FC4E273C6CBF0044E402 /* Presenter */,
+				B422FC4F273C6CCB0044E402 /* View */,
 			);
 			path = Flag;
 			sourceTree = "<group>";
@@ -308,6 +333,9 @@
 				B4A86B392739CA71004AE3A7 /* ContentView.swift in Sources */,
 				B422FC4A273C629F0044E402 /* Flag.swift in Sources */,
 				B4A86B372739CA71004AE3A7 /* FlagerApp.swift in Sources */,
+				B422FC51273C6D0D0044E402 /* FlagEventHandler.swift in Sources */,
+				B47257FC274015650020C375 /* FilterView.swift in Sources */,
+				B422FC4D273C6BE60044E402 /* FlagPresenter.swift in Sources */,
 				B47D36B02739CEC3005F42CA /* FlagData.swift in Sources */,
 				B47D36B92739D3CC005F42CA /* FlagView.swift in Sources */,
 				B422FC12273C22370044E402 /* FlagViewModel.swift in Sources */,

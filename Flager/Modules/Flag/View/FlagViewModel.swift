@@ -21,3 +21,10 @@ class FlagViewModel: ObservableObject, Identifiable {
     @Published var hasSymbol: Bool
 }
 
+class FlagsViewModel: ObservableObject, Identifiable {
+    @Published var flags: [FlagViewModel] = []
+
+    init(flags: [Flag]) {
+        self.flags = flags.map { FlagViewModel(flag: $0) }
+    }
+}
