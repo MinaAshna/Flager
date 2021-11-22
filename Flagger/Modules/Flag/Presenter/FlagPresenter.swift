@@ -15,6 +15,22 @@ class FlagPresenter {
     }
 }
 
+extension FlagPresenter {
+    func flags(withColors colors: [FlagColors]) -> [FlagViewModel] {
+        return flagsViewModel?.flags.filter { $0.colors.contains(colors) } ?? []
+    }
+
+    func onColorsSelected(_ colors: [FlagColors]) {
+        flagsViewModel?.selectedFlags = flags(withColors: colors)
+    }
+}
+
 extension FlagPresenter: FlagEventHandler {
     
+}
+
+public extension Sequence where Element : Hashable {
+    func contains(_ elements: [Element]) -> Bool {
+        return Set(elements).isSubset(of:Set(self))
+    }
 }

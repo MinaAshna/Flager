@@ -15,21 +15,12 @@ struct FlagView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 0) {
-                NavigationLink(destination: FilterView()) {
-                    HStack(spacing: 2) {
-                        Image(systemName: "slider.horizontal.3")
-                            .foregroundColor(.black)
-                        Text("Filters")
-                            .foregroundColor(.black)
-                    }
-                    .padding(8)
-                    .background(Color(red: 230/255, green: 230/255, blue: 218/233)).cornerRadius(18)
-                }
-                .padding()
-                .frame(width: .infinity, height: 50, alignment: .leading)
+
+                FilterView(eventHandler: eventHandler)
+                    .frame(width: 300, height: 200, alignment: .center)
 
                 NavigationLink(destination: Text("More info about the country.")) {
-                    List(flagsViewModel.flags) { flag in
+                    List(flagsViewModel.selectedFlags) { flag in
                         Text("\(flag.name) - \(flag.code)")
                     }
                 }
@@ -42,6 +33,13 @@ struct FlagView: View {
 
 struct FlagView_Previews: PreviewProvider {
     class DummyEventHandler: FlagEventHandler {
+        func flags(withColors colors: [FlagColors]) -> [FlagViewModel] {
+            return []
+        }
+
+        func onColorsSelected(_ colors: [FlagColors]) {
+            
+        }
     }
 
     static var previews: some View {

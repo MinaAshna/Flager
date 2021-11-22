@@ -25,6 +25,7 @@ class FlagViewModel: ObservableObject, Identifiable {
 
 class FlagsViewModel: ObservableObject, Identifiable {
     @Published var flags: [FlagViewModel] = []
+    @Published var selectedFlags: [FlagViewModel] = []
 
     init(flags: [Flag]) {
         self.flags = flags.map { FlagViewModel(flag: $0) }

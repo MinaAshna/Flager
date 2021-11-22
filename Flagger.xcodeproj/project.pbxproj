@@ -30,13 +30,6 @@
 			remoteGlobalIDString = B4A86B322739CA71004AE3A7;
 			remoteInfo = Flager;
 		};
-		B4A86B4E2739CA75004AE3A7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B4A86B2B2739CA71004AE3A7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B4A86B322739CA71004AE3A7;
-			remoteInfo = Flager;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +48,6 @@
 		B4A86B3D2739CA74004AE3A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4A86B432739CA75004AE3A7 /* FlaggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlaggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A86B472739CA75004AE3A7 /* FlaggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaggerTests.swift; sourceTree = "<group>"; };
-		B4A86B4D2739CA75004AE3A7 /* FlaggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlaggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,13 +59,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B4A86B402739CA75004AE3A7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B4A86B4A2739CA75004AE3A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -150,7 +135,6 @@
 			children = (
 				B4A86B332739CA71004AE3A7 /* Flagger.app */,
 				B4A86B432739CA75004AE3A7 /* FlaggerTests.xctest */,
-				B4A86B4D2739CA75004AE3A7 /* FlaggerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,24 +207,6 @@
 			productReference = B4A86B432739CA75004AE3A7 /* FlaggerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B4A86B4C2739CA75004AE3A7 /* FlaggerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B4A86B5D2739CA75004AE3A7 /* Build configuration list for PBXNativeTarget "FlaggerUITests" */;
-			buildPhases = (
-				B4A86B492739CA75004AE3A7 /* Sources */,
-				B4A86B4A2739CA75004AE3A7 /* Frameworks */,
-				B4A86B4B2739CA75004AE3A7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B4A86B4F2739CA75004AE3A7 /* PBXTargetDependency */,
-			);
-			name = FlaggerUITests;
-			productName = FlagerUITests;
-			productReference = B4A86B4D2739CA75004AE3A7 /* FlaggerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -255,10 +221,6 @@
 						CreatedOnToolsVersion = 13.1;
 					};
 					B4A86B422739CA75004AE3A7 = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = B4A86B322739CA71004AE3A7;
-					};
-					B4A86B4C2739CA75004AE3A7 = {
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = B4A86B322739CA71004AE3A7;
 					};
@@ -279,7 +241,6 @@
 			targets = (
 				B4A86B322739CA71004AE3A7 /* Flagger */,
 				B4A86B422739CA75004AE3A7 /* FlaggerTests */,
-				B4A86B4C2739CA75004AE3A7 /* FlaggerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,13 +257,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B4A86B412739CA75004AE3A7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B4A86B4B2739CA75004AE3A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -336,13 +290,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4A86B492739CA75004AE3A7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -350,11 +297,6 @@
 			isa = PBXTargetDependency;
 			target = B4A86B322739CA71004AE3A7 /* Flagger */;
 			targetProxy = B4A86B442739CA75004AE3A7 /* PBXContainerItemProxy */;
-		};
-		B4A86B4F2739CA75004AE3A7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B4A86B322739CA71004AE3A7 /* Flagger */;
-			targetProxy = B4A86B4E2739CA75004AE3A7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -583,52 +525,6 @@
 			};
 			name = Release;
 		};
-		B4A86B5E2739CA75004AE3A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RE4SHLL9XY;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TeamM.FlagerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Flager;
-			};
-			name = Debug;
-		};
-		B4A86B5F2739CA75004AE3A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RE4SHLL9XY;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = TeamM.FlagerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Flager;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -655,15 +551,6 @@
 			buildConfigurations = (
 				B4A86B5B2739CA75004AE3A7 /* Debug */,
 				B4A86B5C2739CA75004AE3A7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B4A86B5D2739CA75004AE3A7 /* Build configuration list for PBXNativeTarget "FlaggerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B4A86B5E2739CA75004AE3A7 /* Debug */,
-				B4A86B5F2739CA75004AE3A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
