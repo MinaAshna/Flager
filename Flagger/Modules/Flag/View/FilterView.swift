@@ -13,7 +13,7 @@ struct FilterView: View {
 
     var colors: Set<String>
     let columns = [
-           GridItem(.adaptive(minimum: 80))
+           GridItem(.adaptive(minimum: 90))
        ]
 
     var body: some View {
