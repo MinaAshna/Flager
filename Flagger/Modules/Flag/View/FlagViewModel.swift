@@ -19,6 +19,7 @@ class FlagViewModel: ObservableObject, Identifiable {
         crosses = flag.crosses
         text = flag.text
         symbol = flag.symbol
+        imageName = flag.imageName
     }
     
     let id = UUID()
@@ -33,14 +34,19 @@ class FlagViewModel: ObservableObject, Identifiable {
     @Published var crosses: Int
     @Published var text: Bool
     @Published var symbol: Bool
+    @Published var imageName: String
 }
 
 class FlagsViewModel: ObservableObject, Identifiable {
     @Published var flags: [FlagViewModel] = []
     @Published var selectedFlags: [FlagViewModel] = []
+    var colors: Set<String> = []
 
     init(flags: [Flag]) {
-        self.flags = flags.map { FlagViewModel(flag: $0) }
+        self.flags = flags.map {
+            colors = colors.union($0.colors)
+            return FlagViewModel(flag: $0)
+        }
         self.selectedFlags = self.flags
     }
 }

@@ -18,6 +18,7 @@ struct Flag: Decodable {
     let crosses: Int
     let text: Bool
     let symbol: Bool
+    let imageName: String
 }
 
 //enum FlagColors: String, Decodable, CaseIterable {

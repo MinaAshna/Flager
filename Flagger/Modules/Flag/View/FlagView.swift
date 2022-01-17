@@ -23,7 +23,7 @@ struct FlagView: View {
                         showingFilters.toggle()
                     }
                     .sheet(isPresented: $showingFilters) {
-                        FilterView()
+                        FilterView(colors: flagsViewModel.colors)
                     }
                 }
                 .frame(width: 80, height: 40, alignment: .center)
