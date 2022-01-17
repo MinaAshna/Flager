@@ -8,7 +8,7 @@
 import Foundation
 
 final class FlagData: ObservableObject {
-  @Published var flags: [Flag] = load("FlagSource.json")
+  @Published var flags: [Flag] = load("Countrydata.json")
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

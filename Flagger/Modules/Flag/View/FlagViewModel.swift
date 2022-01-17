@@ -9,18 +9,30 @@ import Foundation
 
 class FlagViewModel: ObservableObject, Identifiable {
     init(flag: Flag) {
-        name = flag.name
-        code = flag.code
+        country = flag.country
+        continent = flag.continent
+        zone = flag.zone
+        bars = flag.bars
+        stripes = flag.stripes
         colors = flag.colors
-        hasSymbol = flag.hasSymbol
+        circles = flag.circles
+        crosses = flag.crosses
+        text = flag.text
+        symbol = flag.symbol
     }
     
     let id = UUID()
 
-    @Published var name: String
-    @Published var code: String
-    @Published var colors: [FlagColors]
-    @Published var hasSymbol: Bool
+    @Published var country: String
+    @Published var continent: String
+    @Published var zone: String
+    @Published var bars: Int
+    @Published var stripes: Int
+    @Published var colors: [String]
+    @Published var circles: Int
+    @Published var crosses: Int
+    @Published var text: Bool
+    @Published var symbol: Bool
 }
 
 class FlagsViewModel: ObservableObject, Identifiable {
@@ -29,5 +41,6 @@ class FlagsViewModel: ObservableObject, Identifiable {
 
     init(flags: [Flag]) {
         self.flags = flags.map { FlagViewModel(flag: $0) }
+        self.selectedFlags = self.flags
     }
 }

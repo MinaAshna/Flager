@@ -16,11 +16,11 @@ class FlagPresenter {
 }
 
 extension FlagPresenter {
-    func flags(withColors colors: [FlagColors]) -> [FlagViewModel] {
+    func flags(withColors colors: [String]) -> [FlagViewModel] {
         return flagsViewModel?.flags.filter { $0.colors.contains(colors) } ?? []
     }
 
-    func onColorsSelected(_ colors: [FlagColors]) {
+    func onColorsSelected(_ colors: [String]) {
         flagsViewModel?.selectedFlags = flags(withColors: colors)
     }
 }

@@ -8,6 +8,6 @@
 import Foundation
 
 protocol FlagEventHandler {
-    func flags(withColors colors: [FlagColors]) -> [FlagViewModel]
-    func onColorsSelected(_ colors: [FlagColors])
+    func flags(withColors colors: [String]) -> [FlagViewModel]
+    func onColorsSelected(_ colors: [String])
 }
