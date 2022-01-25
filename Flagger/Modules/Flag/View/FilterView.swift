@@ -10,6 +10,7 @@ import SwiftUI
 struct FilterView: View {
     @State private var hasSymbol = false
     @State private var hasText = false
+    @State private var colorIsTapped: Bool = false
 
     @ObservedObject var flagsListViewModel: FlagsListViewModel
 
@@ -43,13 +44,17 @@ struct FilterView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHGrid(rows: columns, spacing: 10) {
                             ForEach(Array(flagsListViewModel.availableColors), id: \.self) { item in
-                                Button(item) {
+                                Button {
+                                    colorIsTapped.toggle()
                                     if flagsListViewModel.colors.contains(item) == true {
                                         flagsListViewModel.colors.remove(item)
                                     } else {
                                         flagsListViewModel.colors.insert(item)
                                     }
+                                } label: {
+                                    Text(item)
                                 }
+//                                .border(colorIsTapped ? Color.black : Color.clear)
                             }
                         }
                         .padding(.horizontal)

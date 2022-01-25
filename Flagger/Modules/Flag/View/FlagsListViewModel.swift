@@ -65,23 +65,7 @@ class FlagsListViewModel: ObservableObject, Identifiable {
 
     private func updateFlags() {
         filteredFlagsList = flagsList.filter {
-            $0.text == self.text && $0.symbol == self.symbol
+            $0.text == self.text && $0.symbol == self.symbol && self.colors.isSubset(of: $0.colors)
         }
     }
 }
-
-//func filterFlags() {
-//        var filteredFlags = [FlagViewModel]()
-//
-//        if let filteredFlag = self.flagsListViewModel?.filteredFlag, let flags = self.flagsListViewModel?.flagsList {
-//            flags.forEach {
-//                if $0.symbol == filteredFlag.symbol && $0.text == filteredFlag.text && $0.colors.isSubset(of: filteredFlag.colors) {
-//                    filteredFlags.append($0)
-//                }
-//            }
-//        } else {
-//            filteredFlags = self.flagsListViewModel?.flagsList ?? []
-//        }
-//
-//        flagsListViewModel?.filteredFlags = filteredFlags
-//}
