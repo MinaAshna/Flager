@@ -49,7 +49,6 @@ struct FilterView: View {
                                     } else {
                                         flagsListViewModel.colors.insert(item)
                                     }
-                                    eventHandler.filterFlags()
                                 }
                             }
                         }
