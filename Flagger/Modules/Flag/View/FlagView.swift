@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FlagView: View {
-    @ObservedObject var flagsViewModel: FlagsViewModel
+    @ObservedObject var flagsListViewModel: FlagsListViewModel
     @State private var isShowingDetailView = false
     @State private var showingFilters = false
     var eventHandler: FlagEventHandler
@@ -17,24 +17,21 @@ struct FlagView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 0) {
-                HStack(spacing: 2) {
-                    Image(systemName: "slider.horizontal.3")
-                    Button("Filters") {
-                        showingFilters.toggle()
-                    }
-                    .sheet(isPresented: $showingFilters) {
-                        FilterView(colors: flagsViewModel.colors)
-                    }
-                }
-                .frame(width: 80, height: 40, alignment: .center)
-                .background(Color(red: 242/255, green: 242/255, blue: 247/255))
-                .cornerRadius(10)
-                .padding()
-                .foregroundColor(.black)
+                FilterView(flagsListViewModel: flagsListViewModel, eventHandler: eventHandler)
+                    .frame(maxHeight: 300)
 
+                Text("\(flagsListViewModel.filteredFlagsList.count) flags found.")
+                    .padding()
                 NavigationLink(destination: Text("More info about the country.")) {
-                    List(flagsViewModel.selectedFlags) { flag in
-                        Text("\(flag.country)")
+                    List(flagsListViewModel.filteredFlagsList, id: \.country) { flag in
+                        HStack {
+                            Image(flag.imageName)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 60, height: 40, alignment: .leading)
+
+                            Text("\(flag.country)")
+                        }
                     }
                 }
             }
@@ -46,18 +43,15 @@ struct FlagView: View {
 
 struct FlagView_Previews: PreviewProvider {
     class DummyEventHandler: FlagEventHandler {
-        func flags(withColors colors: [String]) -> [FlagViewModel] {
-            return []
-        }
-
-        func onColorsSelected(_ colors: [String]) {
-
+        func filterFlags() {
+            
         }
     }
 
     static var previews: some View {
-        let flagsViewModel = FlagsViewModel(flags: [])
-        FlagView(flagsViewModel: flagsViewModel,
+        let flag = Flag(country: "", continent: "", zone: "", bars: 0, stripes: 0, colors: ["red", "blue", "green", "white", "black", "yellow", "brown", "purple"], circles: 0, crosses: 0, text: false, symbol: false, imageName: "")
+        let flagsListViewModel = FlagsListViewModel(flag: flag, flagsList: [flag])
+        FlagView(flagsListViewModel: flagsListViewModel,
                  eventHandler: DummyEventHandler())
     }
 }

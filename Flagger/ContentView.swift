@@ -9,10 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-
-        let flagsViewModel = FlagsViewModel(flags: FlagData().flags)
-        FlagView(flagsViewModel: flagsViewModel,
-                 eventHandler: FlagPresenter(viewModel: flagsViewModel))
+        let flag = Flag(country: "", continent: "", zone: "", bars: 0, stripes: 0, colors: ["red", "blue", "green", "white", "black", "yellow", "brown", "purple"], circles: 0, crosses: 0, text: false, symbol: false, imageName: "")
+        let flagsListViewModel = FlagsListViewModel(flag: flag, flagsList: FlagData().flags)
+        FlagView(flagsListViewModel: flagsListViewModel, eventHandler: FlagPresenter(viewModel: flagsListViewModel))
     }
 }
 

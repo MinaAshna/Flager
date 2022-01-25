@@ -7,26 +7,17 @@
 
 import Foundation
 
+
 class FlagPresenter {
-    weak var flagsViewModel: FlagsViewModel?
+    weak var flagsListViewModel: FlagsListViewModel?
 
-    init(viewModel: FlagsViewModel) {
-        flagsViewModel = viewModel
-    }
-}
-
-extension FlagPresenter {
-    func flags(withColors colors: [String]) -> [FlagViewModel] {
-        return flagsViewModel?.flags.filter { $0.colors.contains(colors) } ?? []
+    init(viewModel: FlagsListViewModel) {
+        flagsListViewModel = viewModel
     }
 
-    func onColorsSelected(_ colors: [String]) {
-        flagsViewModel?.selectedFlags = flags(withColors: colors)
-    }
 }
 
 extension FlagPresenter: FlagEventHandler {
-    
 }
 
 public extension Sequence where Element : Hashable {

@@ -13,32 +13,10 @@ struct Flag: Decodable {
     let zone: String
     let bars: Int
     let stripes: Int
-    let colors: [String]
+    var colors: [String]
     let circles: Int
     let crosses: Int
-    let text: Bool
-    let symbol: Bool
+    var text: Bool
+    var symbol: Bool
     let imageName: String
 }
-
-//enum FlagColors: String, Decodable, CaseIterable {
-//    case white = "color.white"
-//    case red = "color.red"
-//    case yellow = "color.yellow"
-//    case blue
-//    case black = "color.black"
-//    case green = "color.green"
-//    case clear
-//
-//    var color: UIColor {
-//        switch self {
-//        case .white: return UIColor.white
-//        case .red: return UIColor.red
-//        case .yellow: return UIColor.yellow
-//        case .blue: return UIColor.blue
-//        case .black: return UIColor.black
-//        case .green: return UIColor.green
-//        case .clear: return UIColor.clear
-//        }
-//    }
-//}
