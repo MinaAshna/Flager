@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FilterView: View {
+    @Environment(\.colorScheme) var colorScheme
+
     @State private var hasSymbol = false
     @State private var hasText = false
     @State private var colorIsTapped: Bool = false
@@ -53,11 +55,11 @@ struct FilterView: View {
                                     }
                                 } label: {
                                     Text(item)
-                                        .foregroundColor(Color.black)
+                                        .foregroundColor(colorScheme == .light ? Color.black : Color.white)
                                 }
                                 .padding()
                                 .border(Color.gray.opacity(0.3))
-                                .border(flagsListViewModel.colors.contains(item) ? Color.black : Color.clear)
+                                .border(flagsListViewModel.colors.contains(item) ? (colorScheme == .light ? Color.black : .white) : (colorScheme == .dark ? Color.clear : Color.gray))
                                 .cornerRadius(12)
                                 .clipped()
                             }
