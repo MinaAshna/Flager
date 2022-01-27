@@ -53,16 +53,19 @@ struct FilterView: View {
                                     }
                                 } label: {
                                     Text(item)
+                                        .foregroundColor(Color.black)
                                 }
-//                                .border(colorIsTapped ? Color.black : Color.clear)
+                                .padding()
+                                .border(Color.gray.opacity(0.3))
+                                .border(flagsListViewModel.colors.contains(item) ? Color.black : Color.clear)
+                                .cornerRadius(12)
+                                .clipped()
                             }
                         }
-                        .padding(.horizontal)
+                        .padding(.trailing, 0)
                     }
 
                     Divider()
-
-
                 }
 
             }
