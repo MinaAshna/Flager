@@ -11,49 +11,70 @@ class FlagsListViewModel: ObservableObject, Identifiable {
     @Published var flagsList: [Flag] = []
     @Published var filteredFlagsList: [Flag] = []
 
-    @Published var country: String
-    @Published var continent: String
-    @Published var zone: String
-    @Published var bars: Int
-    @Published var stripes: Int
-    @Published var colors: Set<String> {
+    @Published var country: String?
+    @Published var continent: String?
+    @Published var zone: String?
+    @Published var bars: Int? {
         didSet {
             updateFlags()
         }
     }
-    @Published var circles: Int
-    @Published var crosses: Int
-    @Published var text: Bool {
+    @Published var stripes: Int? {
         didSet {
             updateFlags()
         }
     }
-    @Published var symbol: Bool {
+    @Published var saltires: Int? {
         didSet {
             updateFlags()
         }
     }
-    @Published var imageName: String
+    @Published var quarters: Int? {
+        didSet {
+            updateFlags()
+        }
+    }
+    @Published var sunstars: Int? {
+        didSet {
+            updateFlags()
+        }
+    }
+    @Published var crescent: Int? {
+        didSet {
+            updateFlags()
+        }
+    }
+    @Published var traingle: Int? {
+        didSet {
+            updateFlags()
+        }
+    }
+    @Published var colors: Set<String> = [] {
+        didSet {
+            updateFlags()
+        }
+    }
+    @Published var circles: Int?
+    @Published var crosses: Int?
+    @Published var text: Bool? {
+        didSet {
+            updateFlags()
+        }
+    }
+    @Published var symbol: Bool? {
+        didSet {
+            updateFlags()
+        }
+    }
+    @Published var imageName: String?
 
     lazy var availableColors: Set<String> = {
         return extractColors()
     }()
 
-    init(flag: Flag, flagsList: [Flag]) {
+    init(flagsList: [Flag]) {
         self.flagsList = flagsList
         self.filteredFlagsList = flagsList
-        
-        self.country = flag.country
-        self.continent = flag.continent
-        self.zone = flag.zone
-        self.bars = flag.bars
-        self.stripes = flag.stripes
-        self.colors = Set(flag.colors)
-        self.circles = flag.circles
-        self.crosses = flag.crosses
-        self.text = flag.text
-        self.symbol = flag.symbol
-        self.imageName = flag.imageName
     }
 
     private func extractColors() -> Set<String> {
@@ -65,7 +86,9 @@ class FlagsListViewModel: ObservableObject, Identifiable {
 
     private func updateFlags() {
         filteredFlagsList = flagsList.filter {
-            $0.text == self.text && $0.symbol == self.symbol && self.colors.isSubset(of: $0.colors)
+            $0.text == self.text && $0.symbol == self.symbol && self.colors.isSubset(of: $0.colors) 
         }
+        print(flagsList.count)
+        print(filteredFlagsList.count)
     }
 }

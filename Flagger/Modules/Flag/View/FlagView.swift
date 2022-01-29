@@ -11,17 +11,13 @@ struct FlagView: View {
     @ObservedObject var flagsListViewModel: FlagsListViewModel
     @State private var isShowingDetailView = false
     @State private var showingFilters = false
+    @State private var allFilteresTapped = false
     var eventHandler: FlagEventHandler
 
 
     var body: some View {
         NavigationView {
             VStack(alignment: .leading, spacing: 0) {
-                FilterView(flagsListViewModel: flagsListViewModel, eventHandler: eventHandler)
-                    .frame(maxHeight: 300)
-
-                Text("\(flagsListViewModel.filteredFlagsList.count) flags found.")
-                    .padding()
                 NavigationLink(destination: Text("More info about the country.")) {
                     List(flagsListViewModel.filteredFlagsList, id: \.country) { flag in
                         HStack {
@@ -38,6 +34,11 @@ struct FlagView: View {
             .navigationTitle("Flagger")
         }
         .background(Color.yellow)
+        .padding(0)
+        .sheet(isPresented: $allFilteresTapped) {
+            FilterView(flagsListViewModel: flagsListViewModel,
+                       eventHandler: eventHandler)
+        }
     }
 }
 
@@ -49,8 +50,8 @@ struct FlagView_Previews: PreviewProvider {
     }
 
     static var previews: some View {
-        let flag = Flag(country: "", continent: "", zone: "", bars: 0, stripes: 0, colors: ["red", "blue", "green", "white", "black", "yellow", "brown", "purple"], circles: 0, crosses: 0, text: false, symbol: false, imageName: "")
-        let flagsListViewModel = FlagsListViewModel(flag: flag, flagsList: [flag])
+        let flag = Flag(country: "", continent: "", zone: "", bars: 2, stripes: 1, colors: ["red", "blue", "green", "white", "black", "yellow", "brown", "purple"], circles: 3, crosses: 7, saltires: 2, quarters: 1, sunstars: 3, crescent: 3, traingle: 1, text: false, symbol: true, imageName: "DK")
+        let flagsListViewModel = FlagsListViewModel(flagsList: [flag])
         FlagView(flagsListViewModel: flagsListViewModel,
                  eventHandler: DummyEventHandler())
     }
