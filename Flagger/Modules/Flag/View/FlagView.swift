@@ -50,7 +50,7 @@ struct FlagView_Previews: PreviewProvider {
     }
 
     static var previews: some View {
-        let flag = Flag(country: "", continent: "", zone: "", bars: 2, stripes: 1, colors: ["red", "blue", "green", "white", "black", "yellow", "brown", "purple"], circles: 3, crosses: 7, saltires: 2, quarters: 1, sunstars: 3, crescent: 3, traingle: 1, text: false, symbol: true, imageName: "DK")
+        let flag = Flag(country: "", continent: "", zone: "", bars: 2, stripes: 1, colors: ["red", "blue", "green", "white", "black", "yellow", "brown", "purple"], circles: 3, crosses: 7, saltires: 2, quarters: 1, sunstars: 3, crescent: 3, triangle: 1, text: false, symbol: true, imageName: "DK")
         let flagsListViewModel = FlagsListViewModel(flagsList: [flag])
         FlagView(flagsListViewModel: flagsListViewModel,
                  eventHandler: DummyEventHandler())

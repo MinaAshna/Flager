@@ -156,7 +156,7 @@ struct FilterView: View {
                                 Text("Number of Quarters")
                                     .padding([.top, .bottom], 8)
                                 TextField("Quarters", text: $numberOfQuarters)
-                                    .onChange(of: numberOfCrosses) { newValue in
+                                    .onChange(of: numberOfQuarters) { newValue in
                                         flagsListViewModel.quarters = Int(newValue)
                                     }
                                     .padding()
@@ -177,7 +177,19 @@ struct FilterView: View {
                             }
 
                             VStack(alignment: .leading) {
-                                Text("Number of Quarters")
+                                Text("Number of Triangles")
+                                    .padding([.top, .bottom], 8)
+                                TextField("Quarters", text: $numberOfTraingle)
+                                    .onChange(of: numberOfTraingle) { newValue in
+                                        flagsListViewModel.triangle = Int(newValue)
+                                    }
+                                    .padding()
+                                    .border(Color.black.opacity(0.3), width: 1)
+                                    .keyboardType(.numberPad)
+                            }
+
+                            VStack(alignment: .leading) {
+                                Text("Number of Crescent")
                                     .padding([.top, .bottom], 8)
                                 TextField("Quarters", text: $numberOfCrescent)
                                     .onChange(of: numberOfCrescent) { newValue in
@@ -207,7 +219,7 @@ struct FilterView: View {
 
 struct FilterView_Previews: PreviewProvider {
     static var previews: some View {
-        let flag = Flag(country: "", continent: "", zone: "", bars: 2, stripes: 1, colors: ["red", "blue", "green", "white", "black", "yellow", "brown", "purple"], circles: 3, crosses: 7, saltires: 2, quarters: 1, sunstars: 3, crescent: 3, traingle: 1, text: false, symbol: true, imageName: "DK")
+        let flag = Flag(country: "", continent: "", zone: "", bars: 2, stripes: 1, colors: ["red", "blue", "green", "white", "black", "yellow", "brown", "purple"], circles: 3, crosses: 7, saltires: 2, quarters: 1, sunstars: 3, crescent: 3, triangle: 1, text: false, symbol: true, imageName: "DK")
         let flagsListViewModel = FlagsListViewModel(flagsList: [flag])
 
         FilterView(flagsListViewModel: flagsListViewModel, eventHandler: FlagPresenter(viewModel: flagsListViewModel))

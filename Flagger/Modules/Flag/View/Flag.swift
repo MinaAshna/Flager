@@ -20,7 +20,7 @@ struct Flag: Decodable {
     let quarters: Int
     let sunstars: Int
     let crescent: Int
-    let traingle: Int
+    let triangle: Int
     var text: Bool
     var symbol: Bool
     let imageName: String
@@ -39,7 +39,7 @@ class FlagViewModel: ObservableObject {
     @Published var quarters: Int?
     @Published var sunstars: Int?
     @Published var crescent: Int?
-    @Published var traingle: Int?
+    @Published var triangle: Int?
     @Published var text: Bool?
     @Published var symbol: Bool?
     @Published var imageName: String?

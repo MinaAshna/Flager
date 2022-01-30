@@ -44,7 +44,7 @@ class FlagsListViewModel: ObservableObject, Identifiable {
             updateFlags()
         }
     }
-    @Published var traingle: Int? {
+    @Published var triangle: Int? {
         didSet {
             updateFlags()
         }
@@ -54,8 +54,16 @@ class FlagsListViewModel: ObservableObject, Identifiable {
             updateFlags()
         }
     }
-    @Published var circles: Int?
-    @Published var crosses: Int?
+    @Published var circles: Int? {
+        didSet {
+            updateFlags()
+        }
+    }
+    @Published var crosses: Int? {
+        didSet {
+            updateFlags()
+        }
+    }
     @Published var text: Bool? {
         didSet {
             updateFlags()
@@ -86,7 +94,7 @@ class FlagsListViewModel: ObservableObject, Identifiable {
 
     private func updateFlags() {
         filteredFlagsList = flagsList.filter {
-            $0.text == self.text && $0.symbol == self.symbol && self.colors.isSubset(of: $0.colors) 
+            return $0.text == self.text && $0.symbol == self.symbol && self.colors.isSubset(of: $0.colors) && $0.bars == self.bars && $0.stripes == self.stripes && $0.saltires == self.saltires && $0.quarters == self.quarters && $0.sunstars == self.sunstars && $0.crescent == self.crescent && $0.triangle == self.triangle && $0.circles == self.circles
         }
         print(flagsList.count)
         print(filteredFlagsList.count)
