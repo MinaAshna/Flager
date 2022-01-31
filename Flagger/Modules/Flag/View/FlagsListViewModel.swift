@@ -19,32 +19,32 @@ class FlagsListViewModel: ObservableObject, Identifiable {
             updateFlags()
         }
     }
-    @Published var stripes: Int? {
+    @Published var stripes: Int = 0 {
         didSet {
             updateFlags()
         }
     }
-    @Published var saltires: Int? {
+    @Published var saltires: Int = 0  {
         didSet {
             updateFlags()
         }
     }
-    @Published var quarters: Int? {
+    @Published var quarters: Int = 0  {
         didSet {
             updateFlags()
         }
     }
-    @Published var sunstars: Int? {
+    @Published var sunstars: Int = 0  {
         didSet {
             updateFlags()
         }
     }
-    @Published var crescent: Int? {
+    @Published var crescent: Int = 0  {
         didSet {
             updateFlags()
         }
     }
-    @Published var triangle: Int? {
+    @Published var triangle: Int = 0  {
         didSet {
             updateFlags()
         }
@@ -54,22 +54,22 @@ class FlagsListViewModel: ObservableObject, Identifiable {
             updateFlags()
         }
     }
-    @Published var circles: Int? {
+    @Published var circles: Int = 0  {
         didSet {
             updateFlags()
         }
     }
-    @Published var crosses: Int? {
+    @Published var crosses: Int = 0  {
         didSet {
             updateFlags()
         }
     }
-    @Published var text: Bool? {
+    @Published var text: Bool = false {
         didSet {
             updateFlags()
         }
     }
-    @Published var symbol: Bool? {
+    @Published var symbol: Bool = false {
         didSet {
             updateFlags()
         }
