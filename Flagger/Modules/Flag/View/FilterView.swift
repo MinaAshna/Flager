@@ -204,10 +204,10 @@ struct FilterView: View {
                         .padding([.leading, .trailing], 16)
                     }
                     .padding(.bottom, 16)
-                    
+
                     NavigationLink("Find", destination: FlagView(flagsListViewModel: flagsListViewModel, eventHandler: eventHandler))
                         .padding(32)
-                        .foregroundColor(.black)
+                        .foregroundColor(colorScheme == .light ? .black : .white)
                         .border(Color.black, width: 1)
                 }
                 .padding([.leading, .trailing], 0)
