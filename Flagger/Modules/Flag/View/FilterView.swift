@@ -105,7 +105,7 @@ struct FilterView: View {
                                     .padding([.top, .bottom], 8)
                                 TextField("Stripes", text: $numberOfStripes)
                                     .onChange(of: numberOfStripes) { newValue in
-                                        flagsListViewModel.stripes = Int(newValue) ?? 00
+                                        flagsListViewModel.stripes = Int(newValue)
                                     }
                                     .padding()
                                     .border(Color.black.opacity(0.3), width: 1)
@@ -121,7 +121,7 @@ struct FilterView: View {
                                     .padding([.top, .bottom], 8)
                                 TextField("Circles", text: $numberOfCircles)
                                     .onChange(of: numberOfCircles) { newValue in
-                                        flagsListViewModel.circles = Int(newValue) ?? 0
+                                        flagsListViewModel.circles = Int(newValue)
                                     }
                                     .padding()
                                     .border(Color.black.opacity(0.3), width: 1)
@@ -133,7 +133,7 @@ struct FilterView: View {
                                     .padding([.top, .bottom], 8)
                                 TextField("Crosses", text: $numberOfCrosses)
                                     .onChange(of: numberOfCrosses) { newValue in
-                                        flagsListViewModel.crosses = Int(newValue) ?? 0
+                                        flagsListViewModel.crosses = Int(newValue)
                                     }
                                     .padding()
                                     .border(Color.black.opacity(0.3), width: 1)
@@ -145,7 +145,7 @@ struct FilterView: View {
                                     .padding([.top, .bottom], 8)
                                 TextField("Saltires", text: $numberOfSaltires)
                                     .onChange(of: numberOfSaltires) { newValue in
-                                        flagsListViewModel.saltires = Int(newValue) ?? 0
+                                        flagsListViewModel.saltires = Int(newValue)
                                     }
                                     .padding()
                                     .border(Color.black.opacity(0.3), width: 1)
@@ -157,7 +157,7 @@ struct FilterView: View {
                                     .padding([.top, .bottom], 8)
                                 TextField("Quarters", text: $numberOfQuarters)
                                     .onChange(of: numberOfQuarters) { newValue in
-                                        flagsListViewModel.quarters = Int(newValue) ?? 0
+                                        flagsListViewModel.quarters = Int(newValue)
                                     }
                                     .padding()
                                     .border(Color.black.opacity(0.3), width: 1)
@@ -169,7 +169,7 @@ struct FilterView: View {
                                     .padding([.top, .bottom], 8)
                                 TextField("Sunstars", text: $numberOfSunstars)
                                     .onChange(of: numberOfSunstars) { newValue in
-                                        flagsListViewModel.sunstars = Int(newValue) ?? 0
+                                        flagsListViewModel.sunstars = Int(newValue)
                                     }
                                     .padding()
                                     .border(Color.black.opacity(0.3), width: 1)
@@ -181,7 +181,7 @@ struct FilterView: View {
                                     .padding([.top, .bottom], 8)
                                 TextField("Quarters", text: $numberOfTraingle)
                                     .onChange(of: numberOfTraingle) { newValue in
-                                        flagsListViewModel.triangle = Int(newValue) ?? 0
+                                        flagsListViewModel.triangle = Int(newValue)
                                     }
                                     .padding()
                                     .border(Color.black.opacity(0.3), width: 1)
@@ -193,7 +193,7 @@ struct FilterView: View {
                                     .padding([.top, .bottom], 8)
                                 TextField("Quarters", text: $numberOfCrescent)
                                     .onChange(of: numberOfCrescent) { newValue in
-                                        flagsListViewModel.crescent = Int(newValue) ?? 0
+                                        flagsListViewModel.crescent = Int(newValue)
                                     }
                                     .padding()
                                     .border(Color.black.opacity(0.3), width: 1)
@@ -203,8 +203,12 @@ struct FilterView: View {
                         .padding(.top, 0)
                         .padding([.leading, .trailing], 16)
                     }
-
+                    .padding(.bottom, 16)
+                    
                     NavigationLink("Find", destination: FlagView(flagsListViewModel: flagsListViewModel, eventHandler: eventHandler))
+                        .padding(32)
+                        .foregroundColor(.black)
+                        .border(Color.black, width: 1)
                 }
                 .padding([.leading, .trailing], 0)
             }

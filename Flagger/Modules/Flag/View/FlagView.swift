@@ -9,36 +9,29 @@ import SwiftUI
 
 struct FlagView: View {
     @ObservedObject var flagsListViewModel: FlagsListViewModel
-    @State private var isShowingDetailView = false
-    @State private var showingFilters = false
-    @State private var allFilteresTapped = false
     var eventHandler: FlagEventHandler
 
 
     var body: some View {
-        NavigationView {
-            VStack(alignment: .leading, spacing: 0) {
-                NavigationLink(destination: Text("More info about the country.")) {
-                    List(flagsListViewModel.filteredFlagsList, id: \.country) { flag in
-                        HStack {
-                            Image(flag.imageName)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 60, height: 40, alignment: .leading)
+        VStack(alignment: .leading, spacing: 0) {
+            Text("\(flagsListViewModel.filteredFlagsList.count)")
+                .padding(32)
 
-                            Text("\(flag.country)")
-                        }
+            List(flagsListViewModel.filteredFlagsList, id: \.country) { flag in
+                NavigationLink(destination: Text("More info about the country.")) {
+                    HStack {
+                        Image(flag.imageName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 60, height: 40, alignment: .leading)
+
+                        Text("\(flag.country)")
                     }
                 }
+
             }
-            .navigationTitle("Flagger")
         }
-        .background(Color.yellow)
         .padding(0)
-        .sheet(isPresented: $allFilteresTapped) {
-            FilterView(flagsListViewModel: flagsListViewModel,
-                       eventHandler: eventHandler)
-        }
     }
 }
 

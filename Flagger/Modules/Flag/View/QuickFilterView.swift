@@ -24,56 +24,57 @@ struct QuickFilterView: View {
 
 
     var body: some View {
-        VStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 16) {
-                    HStack {
-                        Toggle("Symbol", isOn: $hasSymbol)
-                            .onChange(of: hasSymbol) { _ in
-                                flagsListViewModel.symbol = hasSymbol
-                            }
-                            .padding(.trailing, 8)
-                            .padding([.top, .leading], 16)
-
-                        Divider()
-
-                        Toggle("Text", isOn: $hasText)
-                            .onChange(of: hasText) { _ in
-                                flagsListViewModel.text = hasText
-                            }
-                            .padding([.top, .leading, .trailing], 16)
-                    }
-                    Divider()
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        LazyHGrid(rows: columns, spacing: 10) {
-                            ForEach(Array(flagsListViewModel.availableColors), id: \.self) { item in
-                                Button {
-                                    colorIsTapped.toggle()
-                                    if flagsListViewModel.colors.contains(item) == true {
-                                        flagsListViewModel.colors.remove(item)
-                                    } else {
-                                        flagsListViewModel.colors.insert(item)
-                                    }
-                                } label: {
-                                    Text(item)
-                                        .foregroundColor(colorScheme == .light ? Color.black : Color.white)
-                                }
-                                .padding()
-                                .border(Color.gray.opacity(0.3))
-                                .border(flagsListViewModel.colors.contains(item) == true ? (colorScheme == .light ? Color.black : .white) : (colorScheme == .dark ? Color.clear : Color.gray))
-                                .cornerRadius(12)
-                                .clipped()
-                            }
-                        }
-                        .padding(.trailing, 0)
-                    }
-
-                    Divider()
-                }
-
-            }
-            .padding([.leading, .trailing], 0)
-        }
+        Text("Quick Filters")
+//        VStack {
+//            ScrollView {
+//                VStack(alignment: .leading, spacing: 16) {
+//                    HStack {
+//                        Toggle("Symbol", isOn: $hasSymbol)
+//                            .onChange(of: hasSymbol) { _ in
+//                                flagsListViewModel.symbol = hasSymbol
+//                            }
+//                            .padding(.trailing, 8)
+//                            .padding([.top, .leading], 16)
+//
+//                        Divider()
+//
+//                        Toggle("Text", isOn: $hasText)
+//                            .onChange(of: hasText) { _ in
+//                                flagsListViewModel.text = hasText
+//                            }
+//                            .padding([.top, .leading, .trailing], 16)
+//                    }
+//                    Divider()
+//                    ScrollView(.horizontal, showsIndicators: false) {
+//                        LazyHGrid(rows: columns, spacing: 10) {
+//                            ForEach(Array(flagsListViewModel.availableColors), id: \.self) { item in
+//                                Button {
+//                                    colorIsTapped.toggle()
+//                                    if flagsListViewModel.colors.contains(item) == true {
+//                                        flagsListViewModel.colors.remove(item)
+//                                    } else {
+//                                        flagsListViewModel.colors.insert(item)
+//                                    }
+//                                } label: {
+//                                    Text(item)
+//                                        .foregroundColor(colorScheme == .light ? Color.black : Color.white)
+//                                }
+//                                .padding()
+//                                .border(Color.gray.opacity(0.3))
+//                                .border(flagsListViewModel.colors.contains(item) == true ? (colorScheme == .light ? Color.black : .white) : (colorScheme == .dark ? Color.clear : Color.gray))
+//                                .cornerRadius(12)
+//                                .clipped()
+//                            }
+//                        }
+//                        .padding(.trailing, 0)
+//                    }
+//
+//                    Divider()
+//                }
+//
+//            }
+//            .padding([.leading, .trailing], 0)
+//        }
         .padding(.trailing, 0)
     }
 }
