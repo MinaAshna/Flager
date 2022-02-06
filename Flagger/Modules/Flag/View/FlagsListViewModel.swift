@@ -76,7 +76,7 @@ class FlagsListViewModel: ObservableObject, Identifiable {
     }
     @Published var imageName: String?
 
-    lazy var availableColors: Set<String> = {
+    lazy var availableColors: [String] = {
         return extractColors()
     }()
 
@@ -85,11 +85,11 @@ class FlagsListViewModel: ObservableObject, Identifiable {
         self.filteredFlagsList = flagsList
     }
 
-    private func extractColors() -> Set<String> {
+    private func extractColors() -> [String] {
         var colors: Set<String> = []
         flagsList.forEach { colors = colors.union($0.colors) }
 
-        return colors
+        return Array(colors)
     }
 
     private func updateFlags() {
