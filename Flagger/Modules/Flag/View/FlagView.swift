@@ -14,9 +14,6 @@ struct FlagView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("\(flagsListViewModel.filteredFlagsList.count)")
-                .padding(32)
-
             List(flagsListViewModel.filteredFlagsList, id: \.country) { flag in
                 NavigationLink(destination: Text("More info about the country.")) {
                     HStack {
@@ -28,7 +25,6 @@ struct FlagView: View {
                         Text("\(flag.country)")
                     }
                 }
-
             }
         }
         .padding(0)

@@ -42,13 +42,8 @@ struct FilterView: View {
                             .fill(Color.white)
                             .shadow(radius: 10)
 
-                        VStack(alignment: .leading, spacing: 16) {
+                        VStack(spacing: 16) {
                             Group {
-//                                Text("Tell us about the flag that you're looking for :) ")
-//                                    .foregroundColor(colorScheme == .light ? Color.black : Color.white)
-//                                    .padding()
-//                                    .font(.title)
-
                                 Toggle("Does it have a symbol", isOn: $hasSymbol)
                                     .onChange(of: hasSymbol) { _ in
                                         flagsListViewModel.symbol = hasSymbol
@@ -65,34 +60,37 @@ struct FilterView: View {
                                 .padding([.top, .leading, .trailing], 16)
 
                             Divider()
-                            Text("Colors")
-                                .foregroundColor(Color.black)
-                                .padding(.leading, 16)
+                            
+                            VStack(alignment: .leading) {
+                                Text("Colors")
+                                    .foregroundColor(Color.black)
+                                    .padding(.leading, 16)
 
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                LazyHGrid(rows: columns, spacing: 10) {
-                                    ForEach(Array(flagsListViewModel.availableColors), id: \.self) { item in
-                                        Button {
-                                            colorIsTapped.toggle()
-                                            if flagsListViewModel.colors.contains(item) == true {
-                                                flagsListViewModel.colors.remove(item)
-                                            } else {
-                                                flagsListViewModel.colors.insert(item)
+                                ScrollView(.horizontal, showsIndicators: false) {
+                                    LazyHGrid(rows: columns, spacing: 10) {
+                                        ForEach(Array(flagsListViewModel.availableColors), id: \.self) { item in
+                                            Button {
+                                                colorIsTapped.toggle()
+                                                if flagsListViewModel.colors.contains(item) == true {
+                                                    flagsListViewModel.colors.remove(item)
+                                                } else {
+                                                    flagsListViewModel.colors.insert(item)
+                                                }
+                                            } label: {
+                                                Circle()
+                                                    .stroke(flagsListViewModel.colors.contains(item) == true ? (colorScheme == .light ? Color.black : .white) : (colorScheme == .dark ? Color.clear : Color.gray),
+                                                            lineWidth: flagsListViewModel.colors.contains(item) == true ? 3 : 0.5)
+                                                    .background(Circle().fill(Color("\(item.components(separatedBy: ".")[1])").opacity(1)))
+                                                    .frame(width: 48, height: 48)
+
                                             }
-                                        } label: {
-                                            Circle()
-                                                .stroke(flagsListViewModel.colors.contains(item) == true ? (colorScheme == .light ? Color.black : .white) : (colorScheme == .dark ? Color.clear : Color.gray),
-                                                        lineWidth: flagsListViewModel.colors.contains(item) == true ? 3 : 0.5)
-                                                .background(Circle().fill(Color("\(item.components(separatedBy: ".")[1])").opacity(1)))
-                                                .frame(width: 48, height: 48)
-
+                                            .padding()
                                         }
-                                        .padding()
                                     }
+                                    .padding(.trailing, 0)
                                 }
-                                .padding(.trailing, 0)
+                                .frame(height: 55)
                             }
-                            .frame(height: 55)
 
                             Divider()
 
@@ -217,6 +215,7 @@ struct FilterView: View {
                                 showMore.toggle()
                             } label: {
                                 Text(showMore ? "Show Less" : "Show More")
+                                    .foregroundColor(.secondary)
                                     .padding(20)
                             }
                         }
@@ -226,18 +225,34 @@ struct FilterView: View {
                     }
                     .padding(16)
 
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .fill(Color.white)
+                            .shadow(radius: 10)
 
-                    NavigationLink("Find", destination: FlagView(flagsListViewModel: flagsListViewModel, eventHandler: eventHandler))
-                        .padding(32)
-                        .foregroundColor(colorScheme == .light ? .black : .white)
-                        .border(Color.black, width: 1)
+                        VStack(spacing: 0) {
+                            NavigationLink("Find", destination: FlagView(flagsListViewModel: flagsListViewModel, eventHandler: eventHandler))
+                                .foregroundColor(colorScheme == .light ? .black : .white)
+                                .font(.title)
+                                .frame(height: 30)
+                                .padding(8)
+
+                            Text("\(flagsListViewModel.filteredFlagsList.count)")
+                                .foregroundColor(colorScheme == .light ? .gray : .secondary)
+                                .font(.subheadline)
+                                .frame(height: 18)
+                                .padding(8)
+                        }
+                    }
+                    .padding(.top, 8)
+                    .padding([.leading, .trailing], 16)
                 }
                 .padding([.leading, .trailing], 0)
             }
+            .padding(.top, 16)
             .padding(.trailing, 0)
             .gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
             .navigationTitle("Flagger")
-//            .background(Color(red: 230/255, green: 229/255, blue: 227/255))
         }
     }
 }
