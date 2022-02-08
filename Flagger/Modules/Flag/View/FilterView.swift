@@ -39,7 +39,7 @@ struct FilterView: View {
                 ScrollView {
                     ZStack {
                         RoundedRectangle(cornerRadius: 12, style: .continuous)
-                            .fill(Color.white)
+                            .fill(colorScheme == .dark ? Color.charcoal : .eggWhite)
                             .shadow(radius: 10)
 
                         VStack(spacing: 16) {
@@ -63,7 +63,7 @@ struct FilterView: View {
                             
                             VStack(alignment: .leading) {
                                 Text("Colors")
-                                    .foregroundColor(Color.black)
+                                    .foregroundColor(colorScheme == .dark ? .white : .black)
                                     .padding(.leading, 16)
 
                                 ScrollView(.horizontal, showsIndicators: false) {
@@ -220,14 +220,14 @@ struct FilterView: View {
                             }
                         }
                         .padding(.bottom, 16)
-                        .background(Color.white)
+                        .background(colorScheme == .dark ? Color.charcoal : .eggWhite)
                         .cornerRadius(12)
                     }
                     .padding(16)
 
                     ZStack {
                         RoundedRectangle(cornerRadius: 12, style: .continuous)
-                            .fill(Color.white)
+                            .fill(colorScheme == .dark ? Color.charcoal : .eggWhite)
                             .shadow(radius: 10)
 
                         VStack(spacing: 0) {

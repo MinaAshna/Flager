@@ -20,6 +20,7 @@
 		B4A86B3B2739CA74004AE3A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A86B3A2739CA74004AE3A7 /* Assets.xcassets */; };
 		B4A86B3E2739CA74004AE3A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A86B3D2739CA74004AE3A7 /* Preview Assets.xcassets */; };
 		B4A86B482739CA75004AE3A7 /* FlaggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A86B472739CA75004AE3A7 /* FlaggerTests.swift */; };
+		B4D96F0627B2761D002DFB4F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D96F0527B2761D002DFB4F /* Colors.swift */; };
 		B4F1B44B279620B500CC139B /* CountryData.json in Resources */ = {isa = PBXBuildFile; fileRef = B4F1B44A279620B500CC139B /* CountryData.json */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		B4A86B3D2739CA74004AE3A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4A86B432739CA75004AE3A7 /* FlaggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlaggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A86B472739CA75004AE3A7 /* FlaggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaggerTests.swift; sourceTree = "<group>"; };
+		B4D96F0527B2761D002DFB4F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B4F1B44A279620B500CC139B /* CountryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CountryData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 		B4A86B352739CA71004AE3A7 /* Flagger */ = {
 			isa = PBXGroup;
 			children = (
+				B4D96F0427B27605002DFB4F /* Helpers */,
 				B4478F0027A8039300E5F3DD /* Info.plist */,
 				B47D36B52739D09F005F42CA /* Resources */,
 				B47D36B12739CF76005F42CA /* Modules */,
@@ -173,6 +176,14 @@
 				B4A86B472739CA75004AE3A7 /* FlaggerTests.swift */,
 			);
 			path = FlaggerTests;
+			sourceTree = "<group>";
+		};
+		B4D96F0427B27605002DFB4F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B4D96F0527B2761D002DFB4F /* Colors.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		B4F1B447279611D800CC139B /* Images */ = {
@@ -284,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4A86B392739CA71004AE3A7 /* ContentView.swift in Sources */,
+				B4D96F0627B2761D002DFB4F /* Colors.swift in Sources */,
 				B422FC4A273C629F0044E402 /* Flag.swift in Sources */,
 				B4A86B372739CA71004AE3A7 /* FlaggerApp.swift in Sources */,
 				B422FC51273C6D0D0044E402 /* FlagEventHandler.swift in Sources */,
@@ -437,7 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Flagger/Preview Content\"";
 				DEVELOPMENT_TEAM = RE4SHLL9XY;
 				ENABLE_PREVIEWS = YES;
@@ -468,7 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Flagger/Preview Content\"";
 				DEVELOPMENT_TEAM = RE4SHLL9XY;
 				ENABLE_PREVIEWS = YES;
