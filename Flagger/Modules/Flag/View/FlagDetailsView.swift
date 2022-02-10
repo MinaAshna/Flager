@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FlagDetailsView: View {
+    @Environment(\.colorScheme) var colorScheme
     var flag: FlagViewModel
 
     var body: some View {
@@ -15,6 +16,7 @@ struct FlagDetailsView: View {
             Image(flag.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .shadow(color: colorScheme == .light ? .black : .white, radius: 4)
                 .padding()
 
             Text("\(flag.country.countryName)")
