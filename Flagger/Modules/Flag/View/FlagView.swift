@@ -15,7 +15,7 @@ struct FlagView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             List(flagsListViewModel.filteredFlagsList, id: \.country) { flag in
-                NavigationLink(destination: Text("More info about the country.")) {
+                NavigationLink(destination: FlagDetailsView(flag: flag)) {
                     HStack {
                         Image(flag.imageName)
                             .resizable()
