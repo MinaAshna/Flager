@@ -22,7 +22,7 @@ struct FlagView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 60, height: 40, alignment: .leading)
 
-                        Text("\(flag.country)")
+                        Text("\(flag.country.countryName)")
                     }
                 }
             }
@@ -40,7 +40,9 @@ struct FlagView_Previews: PreviewProvider {
 
     static var previews: some View {
         let flag = Flag(country: "", continent: "", zone: "", bars: 2, stripes: 1, colors: ["red", "blue", "green", "white", "black", "yellow", "brown", "purple"], circles: 3, crosses: 7, saltires: 2, quarters: 1, sunstars: 3, crescent: 3, triangle: 1, text: false, symbol: true, imageName: "DK")
-        let flagsListViewModel = FlagsListViewModel(flagsList: [flag])
+        let flagViewModel = FlagViewModel(flag: flag)
+        let flagsListViewModel = FlagsListViewModel(flagsList: [flagViewModel])
+        
         FlagView(flagsListViewModel: flagsListViewModel,
                  eventHandler: DummyEventHandler())
     }

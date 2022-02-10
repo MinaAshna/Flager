@@ -8,10 +8,10 @@
 import Foundation
 
 class FlagsListViewModel: ObservableObject, Identifiable {
-    @Published var flagsList: [Flag] = []
-    @Published var filteredFlagsList: [Flag] = []
+    @Published var flagsList: [FlagViewModel] = []
+    @Published var filteredFlagsList: [FlagViewModel] = []
 
-    @Published var country: String?
+    @Published var country: Country?
     @Published var continent: String?
     @Published var zone: String?
     @Published var bars: Int? {
@@ -80,7 +80,7 @@ class FlagsListViewModel: ObservableObject, Identifiable {
         return extractColors()
     }()
 
-    init(flagsList: [Flag]) {
+    init(flagsList: [FlagViewModel]) {
         self.flagsList = flagsList
         self.filteredFlagsList = flagsList
     }
