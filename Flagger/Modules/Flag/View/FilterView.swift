@@ -12,7 +12,6 @@ struct FilterView: View {
 
     @State private var hasSymbol = false
     @State private var hasText = false
-    @State private var colorIsTapped: Bool = false
     @State private var showMore = false
 
     @State private var numberOfBars: String = ""
@@ -29,10 +28,6 @@ struct FilterView: View {
 
     var eventHandler: FlagEventHandler
 
-    let columns = [
-        GridItem(.adaptive(minimum: 40))
-    ]
-
     var body: some View {
         NavigationView {
             VStack {
@@ -44,209 +39,60 @@ struct FilterView: View {
 
                         VStack(spacing: 16) {
                             Group {
-                                VStack(alignment: .leading, spacing: 16) {
-                                    Text("Does it have a symbol")
-                                    Picker("Symbol", selection: $flagsListViewModel.symbol) {
-                                        ForEach(SelectionValue.allCases) { value in
-                                            Text(value.description)
-                                                .tag(value)
-                                        }
-                                    }
-                                    .pickerStyle(.segmented)
-                                }
-                                .padding([.top, .leading, .trailing], 16)
-                            }
+                                PickerView(flagsListViewModel: flagsListViewModel, title: "Does it have a symbol", placeholder: "Symbol", value: $flagsListViewModel.symbol)
 
-                            VStack(alignment: .leading, spacing: 16) {
-                                Text("Does it have a text")
-                                Picker("Text", selection: $flagsListViewModel.text) {
-                                    ForEach(SelectionValue.allCases) { value in
-                                        Text(value.description)
-                                            .tag(value)
-                                    }
-                                }
-                                .pickerStyle(.segmented)
+                                PickerView(flagsListViewModel: flagsListViewModel, title: "Does it have a text", placeholder: "Text", value: $flagsListViewModel.text)
                             }
-                            .padding(16)
+                            .padding([.top, .leading, .trailing], 16)
 
-                            VStack(alignment: .leading) {
-                                Text("Colors")
-                                    .foregroundColor(colorScheme == .dark ? .white : .black)
-                                    .padding(.leading, 16)
-
-                                ScrollView(.horizontal, showsIndicators: false) {
-                                    LazyHGrid(rows: columns, spacing: 10) {
-                                        ForEach(Array(flagsListViewModel.availableColors), id: \.self) { item in
-                                            Button {
-                                                colorIsTapped.toggle()
-                                                if flagsListViewModel.colors.contains(item) == true {
-                                                    flagsListViewModel.colors.remove(item)
-                                                } else {
-                                                    flagsListViewModel.colors.insert(item)
-                                                }
-                                            } label: {
-                                                ZStack {
-                                                    Circle()
-                                                        .stroke(colorScheme == .light ? Color.black : .white,
-                                                                lineWidth: 3)
-                                                        .background(Circle().fill(Color("\(item.components(separatedBy: ".")[1])").opacity(1)))
-                                                        .frame(width: 48, height: 48)
-                                                    if flagsListViewModel.colors.contains(item) {
-                                                        Image(systemName: "checkmark")
-                                                            .resizable()
-                                                            .tint(.green)
-                                                            .font(Font.title.weight(.medium))
-                                                            .frame(width: 20, height: 20, alignment: .center)
-                                                    }
-                                                }
-                                            }
-                                            .padding()
-                                        }
-                                    }
-                                    .padding(.trailing, 0)
-                                }
-                                .frame(height: 55)
-                            }
+                            ColorView(flagsListViewModel: flagsListViewModel)
 
                             if showMore {
                                 Group {
-                                    VStack(alignment: .leading) {
-                                        Text("Number of bars")
-                                            .padding([.top, .bottom], 8)
-                                        TextField("Bars", text: $numberOfBars)
-                                            .onChange(of: numberOfBars) { newValue in
-                                                flagsListViewModel.bars = Int(newValue)
-                                            }
-                                            .padding()
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
-                                                    .keyboardType(.numberPad)
-                                            )
-                                    }
-                                    VStack(alignment: .leading) {
-                                        Text("Number of stripes")
-                                            .padding([.top, .bottom], 8)
-                                        TextField("Stripes", text: $numberOfStripes)
-                                            .onChange(of: numberOfStripes) { newValue in
-                                                flagsListViewModel.stripes = Int(newValue)
-                                            }
-                                            .padding()
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : .gray, lineWidth: 1)
-                                                    .keyboardType(.numberPad)
-                                            )
-                                    }
-                                }
-                                .padding(.top, 0)
-                                .padding([.leading, .trailing], 16)
+                                    NumberFieldView(flagsListViewModel: flagsListViewModel, title: "Number of bars", placeholder: "Bars", value: $numberOfBars)
+                                        .onChange(of: numberOfBars) { newValue in
+                                            flagsListViewModel.bars = Int(newValue)
+                                        }
 
-                                Group {
-                                    VStack(alignment: .leading) {
-                                        Text("Number of circles")
-                                            .padding([.top, .bottom], 8)
-                                        TextField("Circles", text: $numberOfCircles)
-                                            .onChange(of: numberOfCircles) { newValue in
-                                                flagsListViewModel.circles = Int(newValue)
-                                            }
-                                            .padding()
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
-                                                    .keyboardType(.numberPad)
-                                            )
-                                    }
+                                    NumberFieldView(flagsListViewModel: flagsListViewModel, title: "Number of stripes", placeholder: "Stripes", value: $numberOfStripes)
+                                        .onChange(of: numberOfStripes) { newValue in
+                                            flagsListViewModel.crescent = Int(newValue)
+                                        }
 
-                                    VStack(alignment: .leading) {
-                                        Text("Number of crosses")
-                                            .padding([.top, .bottom], 8)
-                                        TextField("Crosses", text: $numberOfCrosses)
-                                            .onChange(of: numberOfCrosses) { newValue in
-                                                flagsListViewModel.crosses = Int(newValue)
-                                            }
-                                            .padding()
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
-                                                    .keyboardType(.numberPad)
-                                            )
-                                    }
+                                    NumberFieldView(flagsListViewModel: flagsListViewModel, title: "Number of circles", placeholder: "Circles", value: $numberOfCircles)
+                                        .onChange(of: numberOfCircles) { newValue in
+                                            flagsListViewModel.circles = Int(newValue)
+                                        }
 
-                                    VStack(alignment: .leading) {
-                                        Text("Number of Saltires")
-                                            .padding([.top, .bottom], 8)
-                                        TextField("Saltires", text: $numberOfSaltires)
-                                            .onChange(of: numberOfSaltires) { newValue in
-                                                flagsListViewModel.saltires = Int(newValue)
-                                            }
-                                            .padding()
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
-                                                    .keyboardType(.numberPad)
-                                            )
-                                    }
+                                    NumberFieldView(flagsListViewModel: flagsListViewModel, title: "Number of crosses", placeholder: "Crosses", value: $numberOfCrosses)
+                                        .onChange(of: numberOfCrosses) { newValue in
+                                            flagsListViewModel.crosses = Int(newValue)
+                                        }
 
-                                    VStack(alignment: .leading) {
-                                        Text("Number of Quarters")
-                                            .padding([.top, .bottom], 8)
-                                        TextField("Quarters", text: $numberOfQuarters)
-                                            .onChange(of: numberOfQuarters) { newValue in
-                                                flagsListViewModel.quarters = Int(newValue)
-                                            }
-                                            .padding()
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
-                                                    .keyboardType(.numberPad)
-                                            )
-                                    }
+                                    NumberFieldView(flagsListViewModel: flagsListViewModel, title: "Number of saltires", placeholder: "Saltires", value: $numberOfSaltires)
+                                        .onChange(of: numberOfSaltires) { newValue in
+                                            flagsListViewModel.saltires = Int(newValue)
+                                        }
 
-                                    VStack(alignment: .leading) {
-                                        Text("Number of Sunstars")
-                                            .padding([.top, .bottom], 8)
-                                        TextField("Sunstars", text: $numberOfSunstars)
-                                            .onChange(of: numberOfSunstars) { newValue in
-                                                flagsListViewModel.sunstars = Int(newValue)
-                                            }
-                                            .padding()
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
-                                                    .keyboardType(.numberPad)
-                                            )
-                                    }
+                                    NumberFieldView(flagsListViewModel: flagsListViewModel, title: "Number of quarters", placeholder: "Quarters", value: $numberOfQuarters)
+                                        .onChange(of: numberOfQuarters) { newValue in
+                                            flagsListViewModel.quarters = Int(newValue)
+                                        }
 
-                                    VStack(alignment: .leading) {
-                                        Text("Number of Triangles")
-                                            .padding([.top, .bottom], 8)
-                                        TextField("Quarters", text: $numberOfTraingle)
-                                            .onChange(of: numberOfTraingle) { newValue in
-                                                flagsListViewModel.triangle = Int(newValue)
-                                            }
-                                            .padding()
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
-                                                    .keyboardType(.numberPad)
-                                            )
-                                    }
+                                    NumberFieldView(flagsListViewModel: flagsListViewModel, title: "Number of Sunstars", placeholder: "Sunstars", value: $numberOfSunstars)
+                                        .onChange(of: numberOfSunstars) { newValue in
+                                            flagsListViewModel.sunstars = Int(newValue)
+                                        }
 
-                                    VStack(alignment: .leading) {
-                                        Text("Number of Crescent")
-                                            .padding([.top, .bottom], 8)
-                                        TextField("Quarters", text: $numberOfCrescent)
-                                            .onChange(of: numberOfCrescent) { newValue in
-                                                flagsListViewModel.crescent = Int(newValue)
-                                            }
-                                            .padding()
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
-                                                    .keyboardType(.numberPad)
-                                            )
-                                    }
+                                    NumberFieldView(flagsListViewModel: flagsListViewModel, title: "Number of Triangles", placeholder: "Triangles", value: $numberOfTraingle)
+                                        .onChange(of: numberOfTraingle) { newValue in
+                                            flagsListViewModel.triangle = Int(newValue)
+                                        }
+
+                                    NumberFieldView(flagsListViewModel: flagsListViewModel, title: "Number of Crescent", placeholder: "Crescent", value: $numberOfCrescent)
+                                        .onChange(of: numberOfCrescent) { newValue in
+                                            flagsListViewModel.crescent = Int(newValue)
+                                        }
                                 }
                                 .padding(.top, 0)
                                 .padding([.leading, .trailing], 16)
