@@ -141,6 +141,7 @@ struct FilterView: View {
             .gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
             .navigationTitle("Flagger")
         }
+        .accentColor(colorScheme == .light ? .black : .white)
     }
 }
 
@@ -151,6 +152,12 @@ struct FilterView_Previews: PreviewProvider {
         let flagViewModel = FlagViewModel(flag: flag)
         let flagsListViewModel = FlagsListViewModel(flagsList: [flagViewModel])
 
-        FilterView(flagsListViewModel: flagsListViewModel, eventHandler: FlagPresenter(viewModel: flagsListViewModel))
+        Group {
+            FilterView(flagsListViewModel: flagsListViewModel, eventHandler: FlagPresenter(viewModel: flagsListViewModel))
+                .preferredColorScheme(.light)
+
+            FilterView(flagsListViewModel: flagsListViewModel, eventHandler: FlagPresenter(viewModel: flagsListViewModel))
+                .preferredColorScheme(.dark)
+        }
     }
 }

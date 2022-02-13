@@ -32,6 +32,13 @@ struct PickerView_Previews: PreviewProvider {
         let flag = Flag(country: "", continent: "", zone: "", bars: 2, stripes: 1, colors: ["red", "blue", "green", "white", "black", "yellow", "brown", "purple"], circles: 3, crosses: 7, saltires: 2, quarters: 1, sunstars: 3, crescent: 3, triangle: 1, text: false, symbol: true, imageName: "DK")
         let flagViewModel = FlagViewModel(flag: flag)
         let flagsListViewModel = FlagsListViewModel(flagsList: [flagViewModel])
-        PickerView(flagsListViewModel: flagsListViewModel, title: "Does it have a symbol", placeholder: "Symbol", value: .constant(SelectionValue.maybe))
+
+        Group {
+            PickerView(flagsListViewModel: flagsListViewModel, title: "Does it have a symbol", placeholder: "Symbol", value: .constant(SelectionValue.maybe))
+                .preferredColorScheme(.light)
+
+            PickerView(flagsListViewModel: flagsListViewModel, title: "Does it have a symbol", placeholder: "Symbol", value: .constant(SelectionValue.maybe))
+                .preferredColorScheme(.dark)
+        }
     }
 }

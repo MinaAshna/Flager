@@ -64,6 +64,12 @@ struct ColorView_Previews: PreviewProvider {
         let flagViewModel = FlagViewModel(flag: flag)
         let flagsListViewModel = FlagsListViewModel(flagsList: [flagViewModel])
 
-        ColorView(flagsListViewModel: flagsListViewModel)
+        Group {
+            ColorView(flagsListViewModel: flagsListViewModel)
+                .preferredColorScheme(.light)
+            
+            ColorView(flagsListViewModel: flagsListViewModel)
+                .preferredColorScheme(.dark)
+        }
     }
 }

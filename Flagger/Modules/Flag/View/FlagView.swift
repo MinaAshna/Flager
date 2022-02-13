@@ -28,6 +28,7 @@ struct FlagView: View {
             }
         }
         .padding(0)
+        .navigationTitle("")
     }
 }
 
