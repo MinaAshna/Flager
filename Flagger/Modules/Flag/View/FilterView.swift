@@ -85,12 +85,20 @@ struct FilterView: View {
                                                     flagsListViewModel.colors.insert(item)
                                                 }
                                             } label: {
-                                                Circle()
-                                                    .stroke(flagsListViewModel.colors.contains(item) == true ? (colorScheme == .light ? Color.black : .white) : (colorScheme == .dark ? Color.clear : Color.gray),
-                                                            lineWidth: flagsListViewModel.colors.contains(item) == true ? 3 : 0.5)
-                                                    .background(Circle().fill(Color("\(item.components(separatedBy: ".")[1])").opacity(1)))
-                                                    .frame(width: 48, height: 48)
-//                                                Image(systemName: "checkmark")
+                                                ZStack {
+                                                    Circle()
+                                                        .stroke(colorScheme == .light ? Color.black : .white,
+                                                                lineWidth: 3)
+                                                        .background(Circle().fill(Color("\(item.components(separatedBy: ".")[1])").opacity(1)))
+                                                        .frame(width: 48, height: 48)
+                                                    if flagsListViewModel.colors.contains(item) {
+                                                        Image(systemName: "checkmark")
+                                                            .resizable()
+                                                            .tint(.green)
+                                                            .font(Font.title.weight(.medium))
+                                                            .frame(width: 20, height: 20, alignment: .center)
+                                                    }
+                                                }
                                             }
                                             .padding()
                                         }
@@ -110,8 +118,11 @@ struct FilterView: View {
                                                 flagsListViewModel.bars = Int(newValue)
                                             }
                                             .padding()
-                                            .border(Color.black.opacity(0.3), width: 1)
-                                            .keyboardType(.numberPad)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 6)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .keyboardType(.numberPad)
+                                            )
                                     }
                                     VStack(alignment: .leading) {
                                         Text("Number of stripes")
@@ -121,8 +132,11 @@ struct FilterView: View {
                                                 flagsListViewModel.stripes = Int(newValue)
                                             }
                                             .padding()
-                                            .border(Color.black.opacity(0.3), width: 1)
-                                            .keyboardType(.numberPad)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 6)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .keyboardType(.numberPad)
+                                            )
                                     }
                                 }
                                 .padding(.top, 0)
@@ -137,8 +151,11 @@ struct FilterView: View {
                                                 flagsListViewModel.circles = Int(newValue)
                                             }
                                             .padding()
-                                            .border(Color.black.opacity(0.3), width: 1)
-                                            .keyboardType(.numberPad)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 6)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .keyboardType(.numberPad)
+                                            )
                                     }
 
                                     VStack(alignment: .leading) {
@@ -149,8 +166,11 @@ struct FilterView: View {
                                                 flagsListViewModel.crosses = Int(newValue)
                                             }
                                             .padding()
-                                            .border(Color.black.opacity(0.3), width: 1)
-                                            .keyboardType(.numberPad)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 6)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .keyboardType(.numberPad)
+                                            )
                                     }
 
                                     VStack(alignment: .leading) {
@@ -161,8 +181,11 @@ struct FilterView: View {
                                                 flagsListViewModel.saltires = Int(newValue)
                                             }
                                             .padding()
-                                            .border(Color.black.opacity(0.3), width: 1)
-                                            .keyboardType(.numberPad)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 6)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .keyboardType(.numberPad)
+                                            )
                                     }
 
                                     VStack(alignment: .leading) {
@@ -173,8 +196,11 @@ struct FilterView: View {
                                                 flagsListViewModel.quarters = Int(newValue)
                                             }
                                             .padding()
-                                            .border(Color.black.opacity(0.3), width: 1)
-                                            .keyboardType(.numberPad)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 6)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .keyboardType(.numberPad)
+                                            )
                                     }
 
                                     VStack(alignment: .leading) {
@@ -185,8 +211,11 @@ struct FilterView: View {
                                                 flagsListViewModel.sunstars = Int(newValue)
                                             }
                                             .padding()
-                                            .border(Color.black.opacity(0.3), width: 1)
-                                            .keyboardType(.numberPad)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 6)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .keyboardType(.numberPad)
+                                            )
                                     }
 
                                     VStack(alignment: .leading) {
@@ -197,8 +226,11 @@ struct FilterView: View {
                                                 flagsListViewModel.triangle = Int(newValue)
                                             }
                                             .padding()
-                                            .border(Color.black.opacity(0.3), width: 1)
-                                            .keyboardType(.numberPad)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 6)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .keyboardType(.numberPad)
+                                            )
                                     }
 
                                     VStack(alignment: .leading) {
@@ -209,8 +241,11 @@ struct FilterView: View {
                                                 flagsListViewModel.crescent = Int(newValue)
                                             }
                                             .padding()
-                                            .border(Color.black.opacity(0.3), width: 1)
-                                            .keyboardType(.numberPad)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 6)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .keyboardType(.numberPad)
+                                            )
                                     }
                                 }
                                 .padding(.top, 0)
