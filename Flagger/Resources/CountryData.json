@@ -3250,7 +3250,7 @@
    "triangle": 0,
    "symbol": true,
    "animate": true,
-   "text": true,
+   "text": false,
    "topleftcolor": "color.blue",
    "botrightcolor": "color.green"
  },
