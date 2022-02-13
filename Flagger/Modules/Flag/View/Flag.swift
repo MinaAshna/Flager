@@ -36,6 +36,7 @@ struct Translation: Decodable {
 struct Country: Hashable {
     let countryName: String
     let countryKey: String
+    let isoCode: String
 }
 
 class FlagViewModel: ObservableObject {
@@ -75,7 +76,8 @@ class FlagViewModel: ObservableObject {
 
         self.text = SelectionValue.maybe
         self.symbol = SelectionValue.maybe
-        self.country = Country(countryName: "", countryKey: flag.country)
+        self.country = Country(countryName: "", countryKey: flag.country, isoCode: "")
+
         defer {
             self.country = getCountry(from: countryKey)
             self.text = parseValue(from: flag.text)
@@ -85,11 +87,14 @@ class FlagViewModel: ObservableObject {
 
     private func getCountry(from key: String) -> Country {
         var countryName = key
-        if let countryCode = key.split(separator: ".").last?.lowercased() {
-            countryName = FlagData().translationsEn.first(where: { $0.alpha2 ==  countryCode })?.name ?? key
+        guard let countryCode = key.split(separator: ".").last?.lowercased() else {
+            return Country(countryName: countryName, countryKey: key, isoCode: key)
         }
 
-        return Country(countryName: countryName, countryKey: key)
+        countryName = FlagData().translationsEn.first(where: { $0.alpha2 ==  countryCode })?.name ?? key
+
+
+        return Country(countryName: countryName, countryKey: key, isoCode: countryCode.uppercased())
     }
 
     private func parseValue(from value: Bool) -> SelectionValue {
