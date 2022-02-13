@@ -120,7 +120,7 @@ struct FilterView: View {
                                             .padding()
                                             .overlay(
                                                 RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
                                                     .keyboardType(.numberPad)
                                             )
                                     }
@@ -134,7 +134,7 @@ struct FilterView: View {
                                             .padding()
                                             .overlay(
                                                 RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : .gray, lineWidth: 1)
                                                     .keyboardType(.numberPad)
                                             )
                                     }
@@ -153,7 +153,7 @@ struct FilterView: View {
                                             .padding()
                                             .overlay(
                                                 RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
                                                     .keyboardType(.numberPad)
                                             )
                                     }
@@ -168,7 +168,7 @@ struct FilterView: View {
                                             .padding()
                                             .overlay(
                                                 RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
                                                     .keyboardType(.numberPad)
                                             )
                                     }
@@ -183,7 +183,7 @@ struct FilterView: View {
                                             .padding()
                                             .overlay(
                                                 RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
                                                     .keyboardType(.numberPad)
                                             )
                                     }
@@ -198,7 +198,7 @@ struct FilterView: View {
                                             .padding()
                                             .overlay(
                                                 RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
                                                     .keyboardType(.numberPad)
                                             )
                                     }
@@ -213,7 +213,7 @@ struct FilterView: View {
                                             .padding()
                                             .overlay(
                                                 RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
                                                     .keyboardType(.numberPad)
                                             )
                                     }
@@ -228,7 +228,7 @@ struct FilterView: View {
                                             .padding()
                                             .overlay(
                                                 RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
                                                     .keyboardType(.numberPad)
                                             )
                                     }
@@ -243,7 +243,7 @@ struct FilterView: View {
                                             .padding()
                                             .overlay(
                                                 RoundedRectangle(cornerRadius: 6)
-                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.eggWhite, lineWidth: 1)
+                                                    .stroke(colorScheme == .light ? .black.opacity(0.2) : Color.gray, lineWidth: 1)
                                                     .keyboardType(.numberPad)
                                             )
                                     }
