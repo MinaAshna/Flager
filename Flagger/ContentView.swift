@@ -11,7 +11,8 @@ struct ContentView: View {
     var body: some View {
 
         let flagsListViewModel = FlagsListViewModel(flagsList: createFlagViewModel(from: FlagData().flags))
-        FilterView(flagsListViewModel: flagsListViewModel, eventHandler: FlagPresenter(viewModel: flagsListViewModel))
+        FilterView(flagsListViewModel: flagsListViewModel,
+                   eventHandler: FlagPresenter(viewModel: flagsListViewModel))
     }
 
     private func createFlagViewModel(from flags: [Flag]) -> [FlagViewModel] {

@@ -32,7 +32,7 @@ struct FilterView: View {
     let columns = [
         GridItem(.adaptive(minimum: 40))
     ]
-    
+
     var body: some View {
         NavigationView {
             VStack {
@@ -44,23 +44,31 @@ struct FilterView: View {
 
                         VStack(spacing: 16) {
                             Group {
-                                Toggle("Does it have a symbol", isOn: $hasSymbol)
-                                    .onChange(of: hasSymbol) { _ in
-                                        flagsListViewModel.symbol = hasSymbol
+                                VStack(alignment: .leading, spacing: 16) {
+                                    Text("Does it have a symbol")
+                                    Picker("Symbol", selection: $flagsListViewModel.symbol) {
+                                        ForEach(SelectionValue.allCases) { value in
+                                            Text(value.description)
+                                                .tag(value)
+                                        }
                                     }
-                                    .padding([.top, .leading, .trailing], 16)
-
-                            }
-                            Divider()
-
-                            Toggle("Does it have a text", isOn: $hasText)
-                                .onChange(of: hasText) { _ in
-                                    flagsListViewModel.text = hasText
+                                    .pickerStyle(.segmented)
                                 }
                                 .padding([.top, .leading, .trailing], 16)
+                            }
 
-                            Divider()
-                            
+                            VStack(alignment: .leading, spacing: 16) {
+                                Text("Does it have a text")
+                                Picker("Text", selection: $flagsListViewModel.text) {
+                                    ForEach(SelectionValue.allCases) { value in
+                                        Text(value.description)
+                                            .tag(value)
+                                    }
+                                }
+                                .pickerStyle(.segmented)
+                            }
+                            .padding(16)
+
                             VStack(alignment: .leading) {
                                 Text("Colors")
                                     .foregroundColor(colorScheme == .dark ? .white : .black)
@@ -82,7 +90,7 @@ struct FilterView: View {
                                                             lineWidth: flagsListViewModel.colors.contains(item) == true ? 3 : 0.5)
                                                     .background(Circle().fill(Color("\(item.components(separatedBy: ".")[1])").opacity(1)))
                                                     .frame(width: 48, height: 48)
-
+//                                                Image(systemName: "checkmark")
                                             }
                                             .padding()
                                         }
@@ -91,8 +99,6 @@ struct FilterView: View {
                                 }
                                 .frame(height: 55)
                             }
-
-                            Divider()
 
                             if showMore {
                                 Group {

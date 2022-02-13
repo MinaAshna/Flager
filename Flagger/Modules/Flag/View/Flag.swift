@@ -53,8 +53,8 @@ class FlagViewModel: ObservableObject {
     @Published var sunstars: Int
     @Published var crescent: Int
     @Published var triangle: Int
-    @Published var text: Bool
-    @Published var symbol: Bool
+    @Published var text: SelectionValue
+    @Published var symbol: SelectionValue
     @Published var imageName: String
 
     init(flag: Flag) {
@@ -71,13 +71,15 @@ class FlagViewModel: ObservableObject {
         self.sunstars = flag.sunstars
         self.crescent = flag.crescent
         self.triangle = flag.triangle
-        self.text = flag.text
-        self.symbol = flag.symbol
         self.imageName = flag.imageName
 
+        self.text = SelectionValue.maybe
+        self.symbol = SelectionValue.maybe
         self.country = Country(countryName: "", countryKey: flag.country)
         defer {
             self.country = getCountry(from: countryKey)
+            self.text = parseValue(from: flag.text)
+            self.symbol = parseValue(from: flag.symbol)
         }
     }
 
@@ -88,5 +90,27 @@ class FlagViewModel: ObservableObject {
         }
 
         return Country(countryName: countryName, countryKey: key)
+    }
+
+    private func parseValue(from value: Bool) -> SelectionValue {
+        return value ? .yes : .no
+    }
+}
+
+enum SelectionValue: CaseIterable, Identifiable {
+    case yes
+    case no
+    case maybe
+    var id: Self { self }
+
+    var description: String {
+        switch self {
+        case .yes:
+            return "Yes"
+        case .no:
+            return "No"
+        case .maybe:
+            return "Maybe"
+        }
     }
 }

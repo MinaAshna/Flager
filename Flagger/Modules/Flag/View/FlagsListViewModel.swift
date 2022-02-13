@@ -64,12 +64,12 @@ class FlagsListViewModel: ObservableObject, Identifiable {
             updateFlags()
         }
     }
-    @Published var text: Bool? {
+    @Published var text: SelectionValue = .maybe {
         didSet {
             updateFlags()
         }
     }
-    @Published var symbol: Bool? {
+    @Published var symbol: SelectionValue = .maybe {
         didSet {
             updateFlags()
         }
@@ -94,17 +94,24 @@ class FlagsListViewModel: ObservableObject, Identifiable {
 
     private func updateFlags() {
         self.filteredFlagsList = self.flagsList
-        
-        if self.text != nil {
-            filteredFlagsList = filteredFlagsList.filter {
-                return $0.text == self.text
-            }
+
+
+        switch self.text {
+        case .yes:
+            filteredFlagsList = filteredFlagsList.filter { $0.text == .yes }
+        case .no:
+            filteredFlagsList = filteredFlagsList.filter { $0.text == .no }
+        case .maybe:
+            break
         }
 
-        if self.symbol != nil {
-            filteredFlagsList = filteredFlagsList.filter {
-                return $0.symbol == self.symbol
-            }
+        switch self.symbol {
+        case .yes:
+            filteredFlagsList = filteredFlagsList.filter { $0.symbol == .yes }
+        case .no:
+            filteredFlagsList = filteredFlagsList.filter { $0.symbol == .no }
+        case .maybe:
+            break
         }
 
         if self.bars != nil {
