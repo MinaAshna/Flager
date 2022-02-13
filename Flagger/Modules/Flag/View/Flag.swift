@@ -72,7 +72,7 @@ class FlagViewModel: ObservableObject {
         self.sunstars = flag.sunstars
         self.crescent = flag.crescent
         self.triangle = flag.triangle
-        self.imageName = flag.imageName
+        self.imageName = flag.imageName.lowercased()
 
         self.text = SelectionValue.maybe
         self.symbol = SelectionValue.maybe
