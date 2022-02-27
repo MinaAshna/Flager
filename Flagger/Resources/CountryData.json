@@ -2478,27 +2478,6 @@
    "botrightcolor": "color.blue"
  },
  {
-   "country": "country.AN",
-   "imageName": "AN",
-   "continent": "continent.na",
-   "zone": "NW",
-   "bars": 0,
-   "stripes": 1,
-   "colors": ["color.red", "color.blue", "color.white"],
-   "circles": 0,
-   "crosses": 0,
-   "saltires": 0,
-   "quarters": 0,
-   "sunstars": 6,
-   "crescent": 0,
-   "triangle": 0,
-   "symbol": false,
-   "animate": false,
-   "text": false,
-   "topleftcolor": "color.white",
-   "botrightcolor": "color.white"
- },
- {
    "country": "country.NZ",
    "imageName": "NZ",
    "continent": "continent.oce",
